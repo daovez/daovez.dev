@@ -445,7 +445,7 @@ nav .play-btn {
         max-width: none !important;
         left: 20px !important;
         right: auto !important;
-        top: 30px !important;
+        top: 0px !important;
         transform: none !important;
         padding: 18px !important;
     }
