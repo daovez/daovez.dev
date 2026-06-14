@@ -274,7 +274,7 @@ nav a:hover {
     left: 70px;
     bottom: 90px;
     z-index: 5;
-    color: #def71c;
+    color: #ffffff;
     opacity: 0;
     transform: translateY(30px);
     filter: blur(5px);
@@ -289,7 +289,7 @@ nav a:hover {
     font-family: "Ubuntu", sans-serif;
     font-size: 3.2rem;
     font-weight: 300;
-    color: #def71c;
+    color: #ffffff;
     letter-spacing: -2px;
 }
 
@@ -297,14 +297,13 @@ nav a:hover {
     margin-top: 9px;
     font-size: .9rem;
     letter-spacing: 1px;
-    color: #def71c;
+    color: #ffffff;
 }
-
 
 .linea-animada{
     width: 0;
     height: 2px;
-    background: #def71c;
+    background: #ffffff;
     margin: 12px 0;
 
     animation: dibujarLinea 1.5s ease forwards;
@@ -405,4 +404,50 @@ nav a:hover {
     .line {
         display: none;
     }
+    @media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    header {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        color: #ffffff;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sidebar-links {
+        flex-direction: row;
+        gap: 25px;
+    }
+}
 }
