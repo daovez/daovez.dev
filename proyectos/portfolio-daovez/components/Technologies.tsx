@@ -1,3 +1,3 @@
 export default function Technologies() {
-  return <div>Technologies</div>;
+  return <section id="tecnologias">Tecnologías</section>;
 }

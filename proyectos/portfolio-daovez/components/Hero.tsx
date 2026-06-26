@@ -1,3 +1,3 @@
 export default function Hero() {
-  return <div>Hero</div>;
+  return <section id="inicio">Héroe</section>;
 }
