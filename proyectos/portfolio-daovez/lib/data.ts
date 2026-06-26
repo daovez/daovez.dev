@@ -24,3 +24,26 @@ export const technologies = [
     description: "Plataforma donde alojaremos el código del portfolio.",
   },
 ];
+export const projects = [
+  {
+    title: "Portfolio Personal",
+    description:
+      "Portfolio profesional creado con Next.js, React, TypeScript y Tailwind CSS.",
+    technologies: ["Next.js", "React", "TypeScript"],
+    status: "En desarrollo",
+  },
+  {
+    title: "Task Manager",
+    description:
+      "Aplicación para gestionar tareas, practicar estados, formularios y lógica de usuario.",
+    technologies: ["React", "TypeScript", "Local Storage"],
+    status: "Planificado",
+  },
+  {
+    title: "E-commerce Demo",
+    description:
+      "Tienda online de demostración para practicar productos, carrito y diseño comercial.",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    status: "Planificado",
+  },
+];
