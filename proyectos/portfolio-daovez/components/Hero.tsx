@@ -1,17 +1,19 @@
 export default function Hero() {
   return (
     <section id="inicio">
-      <p>Portfolio Profesional</p>
+      <p>FULL STACK WEB DESIGN & DEVELOPMENT</p>
 
       <h1>
-        Hola, soy David.
+        Diseño.
         <br />
-        Construyo aplicaciones web modernas, rápidas y escalables.
+        Desarrollo.
+        <br />
+        Producto digital.
       </h1>
 
       <p>
-        Desarrollador Web Full Stack enfocado en crear productos digitales
-        modernos con React, Next.js y TypeScript.
+        Creo aplicaciones web modernas, rápidas y escalables combinando diseño,
+        frontend y backend.
       </p>
 
       <div>
