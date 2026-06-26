@@ -6,26 +6,27 @@ export default function Projects() {
       <h2>Proyectos</h2>
 
       <p>
-        Estos son algunos proyectos que estoy construyendo para practicar y
-        demostrar mis habilidades como desarrollador.
+        Una selección de proyectos que estoy desarrollando para aprender,
+        experimentar y construir productos digitales reales.
       </p>
 
-      <div>
-        {projects.map((project) => (
-          <article key={project.title}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+      {projects.map((project) => (
+        <article key={project.title}>
+          <h3>{project.title}</h3>
 
-            <p>Estado: {project.status}</p>
+          <p>{project.description}</p>
 
-            <ul>
-              {project.technologies.map((technology) => (
-                <li key={technology}>{technology}</li>
-              ))}
-            </ul>
-          </article>
-        ))}
-      </div>
+          <p>
+            <strong>Estado:</strong> {project.status}
+          </p>
+
+          <ul>
+            {project.technologies.map((technology) => (
+              <li key={technology}>{technology}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
     </section>
   );
 }
