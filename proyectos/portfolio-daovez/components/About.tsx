@@ -10,13 +10,10 @@ export default function About() {
 
         <div className="about-content">
           <p>
-            Soy David López Velasco y actualmente estoy construyendo mi camino como desarrollador Full Stack.
+            Soy David López Velasco, estudiante de Ingeniería Informática y desarrollador Full Stack en formación. Me apasiona crear aplicaciones web modernas, aprender nuevas tecnologías y convertir ideas en productos digitales funcionales.
 
-Me gusta aprender creando proyectos reales, experimentar con nuevas tecnologías y entender cómo funcionan las cosas por dentro. Disfruto tanto desarrollando la parte visual de una aplicación como diseñando la lógica que hay detrás.
+A través de Daovez comparto los proyectos y conocimientos que forman parte de mi evolución como desarrollador.
 
-Este portfolio es el lugar donde documento mi evolución, comparto los proyectos que voy construyendo y reúno todo lo que voy aprendiendo durante mi formación.
-
-Mi objetivo es seguir creciendo como desarrollador, crear productos digitales propios y convertir Daovez en una marca donde tecnología, diseño y creatividad convivan en el mismo espacio.
 
           </p>
         </div>

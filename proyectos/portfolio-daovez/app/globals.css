@@ -20,7 +20,7 @@ html {
 }
 
 section {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 50px;
 }
 
 body {
@@ -45,10 +45,12 @@ ul {
 /* NAVBAR */
 
 .navbar {
+
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 100;
+  left: -0;
+
 
   width: 100%;
   height: 90px;
@@ -149,7 +151,13 @@ ul {
   min-height: 100vh;
   padding: 150px 48px 60px;
   overflow: hidden;
-  background: var(--background);
+  background:
+  linear-gradient(
+    135deg,
+    #000000 0%,
+    #050816 80%,
+    #051550 100%
+  );
 }
 
 .hero-content {
@@ -226,6 +234,60 @@ ul {
   object-position: bottom right;
 }
 
+.hero-email {
+  position: absolute;
+  right: 120px;
+  bottom: 140px;
+  z-index: 5;
+}
+
+.hero-email a {
+  position: relative;
+
+  display: inline-block;
+
+  color: var(--text);
+
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.hero-email a::after {
+  content: "";
+
+  position: absolute;
+
+  left: -6px;
+  bottom: -3px;
+
+  width: calc(100% + 12px);
+  height: 17px;
+
+  background: #123499;
+
+  opacity: 1;
+
+  border-radius: 20px 8px 18px 10px;
+
+  transform: rotate(-1.5deg);
+
+  z-index: -1;
+
+  
+}
+
+
+.hero-email a:hover {
+  transform: translateY(-2px);
+}
+
+
+
 /* SECCIONES */
 
 section:not(.hero) {
@@ -234,54 +296,101 @@ section:not(.hero) {
 }
 
 #sobre-mi {
-  background: var(--surface);
-  color: var(--text);
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #000000 0%,
+      #020617 35%,
+      #051550 100%
+    );
 }
 
-#tecnologias {
-  background: var(--background);
-  color: var(--text);
-}
+/* Halo principal */
 
-#proyectos {
-  background: var(--surface);
-  color: var(--text);
-}
+#sobre-mi::before {
+  content: "";
 
-#contacto {
-  background: var(--background);
-  color: var(--text);
-}
+  position: absolute;
 
-#footer,
-.footer {
-  background: var(--background);
-  color: var(--text-secondary);
-}
+  width: 900px;
+  height: 900px;
 
-/* CURSOR */
+  top: -250px;
+  right: -250px;
 
-.cursor-dot {
-  position: fixed;
-  width: 5px;
-  height: 5px;
-  background: var(--text);
   border-radius: 50%;
+
+  background: #284bbf;
+
+  filter: blur(220px);
+
+  opacity: 0.45;
+
+  animation: floatGlow 12s ease-in-out infinite alternate;
+
   pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
 }
 
-.cursor-ring {
-  position: fixed;
-  width: 18px;
-  height: 18px;
-  border: 1px solid var(--text);
+/* Halo secundario */
+
+#sobre-mi::after {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  bottom: -300px;
+  left: -200px;
+
   border-radius: 50%;
+
+  background: #123499;
+
+  filter: blur(200px);
+
+  opacity: 0.25;
+
+  animation: floatGlow2 14s ease-in-out infinite alternate;
+
   pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  opacity: 0.7;
+}
+
+@keyframes floatGlow {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-180px, 120px);
+  }
+}
+
+@keyframes floatGlow2 {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(120px, -80px);
+  }
+}
+
+/* CONTENIDO */
+
+.about-container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-eyebrow {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: rgba(255,255,255,.85);
 }
 
 /* RESPONSIVE */

@@ -2,20 +2,23 @@ import { technologies } from "@/lib/data";
 
 export default function Technologies() {
   return (
-    <section id="tecnologias">
-      <h2>Tecnologías</h2>
+    <section id="tecnologias" className="technologies">
+      <div className="technologies-header">
+        <p className="section-eyebrow">Tecnologías</p>
 
-      <p>
-        Estas son las tecnologías principales que estoy utilizando para construir
-        este portfolio profesional.
-      </p>
+        <h2>
+          Las herramientas con las que construyo productos digitales modernos.
+        </h2>
+      </div>
 
-      <div>
+      <div className="technologies-grid">
         {technologies.map((technology) => (
-          <article key={technology.name}>
-            <h3>{technology.name}</h3>
-            <p>{technology.description}</p>
-          </article>
+          <div
+            key={technology.name}
+            className="technology-item"
+          >
+            {technology.name}
+          </div>
         ))}
       </div>
     </section>

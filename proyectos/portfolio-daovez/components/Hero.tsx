@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 export default function Hero() {
   const roles = [
-    "Software Engineer",
     "Desarrollador Java Full Stack",
     "Backend Developer",
     "Frontend Developer",
@@ -55,11 +54,11 @@ export default function Hero() {
         </p>
 
         <h1 className="hero-title">
-          DISEÑO.
+          IMAGINA
           <br />
-          DESARROLLO.
+          DESARROLLA
           <br />
-          SOFTWARE.
+          COMPARTE
         </h1>
       </div>
 
@@ -72,28 +71,32 @@ export default function Hero() {
           className="hero-photo"
         />
       </div>
-
+      <div className="hero-email">
+  <a href="mailto: yo@daovez.com">
+    yo@daovez.com
+  </a>
+</div>
       <div className="socials">
-        <a
-          href="https://www.linkedin.com/in/daovez/"
-          className="social-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          in
-        </a>
+  <a
+    href="https://www.linkedin.com/in/daovez/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    <FaLinkedinIn />
+  </a>
 
-        <span className="social-separator"></span>
+  <span></span>
 
-        <a
-          href="https://github.com/daovez"
-          className="social-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          gh
-        </a>
-      </div>
+  <a
+    href="https://github.com/daovez"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    <FaGithub />
+  </a>
+</div>
     </section>
   );
 }

@@ -21,9 +21,6 @@ export default function Navbar() {
         <a href="#tecnologias">Tecnologías</a>
         <a href="#proyectos">Proyectos</a>
 
-        <a href="#contacto" className="contact-link">
-          Contacto
-        </a>
 
       </nav>
     </header>
