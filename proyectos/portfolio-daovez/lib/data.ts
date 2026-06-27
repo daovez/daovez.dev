@@ -33,24 +33,19 @@ export const technologies = [
 
 export const projects = [
   {
-    title: "Daovez Portfolio",
+    title: "Portfolio Daovez",
     description:
-      "Portfolio profesional desarrollado con Next.js, React y TypeScript.",
-    technologies: ["Next.js", "React", "TypeScript"],
-    status: "En desarrollo",
+      "Portfolio profesional desarrollado con Next.js y TypeScript.",
+    github: "https://github.com/daovez/daovez.dev",
   },
   {
-    title: "Daovez Web Studio",
-    description:
-      "Web comercial para servicios de diseño y desarrollo web.",
-    technologies: ["React", "Vite", "CSS"],
-    status: "En desarrollo",
+    title: "Daovez Studio",
+    description: "Web comercial de Daovez Studio.",
+    github: "https://github.com/daovez",
   },
   {
-    title: "Instagram Canvas",
-    description:
-      "Aplicación interactiva para crear composiciones visuales para redes sociales.",
-    technologies: ["React", "Canvas API", "JavaScript"],
-    status: "Completado",
+    title: "Academy",
+    description: "Plataforma de aprendizaje y documentación.",
+    github: "https://github.com/daovez",
   },
 ];

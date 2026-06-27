@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
 import { Inter, Space_Grotesk, Ubuntu } from "next/font/google";
-
 import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({

@@ -1,25 +1,39 @@
-import { technologies } from "@/lib/data";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiGit,
+  SiGithub,
+  SiMysql,
+  SiSpring,
+} from "react-icons/si";
+
+import { FaJava } from "react-icons/fa";
 
 export default function Technologies() {
   return (
     <section id="tecnologias" className="technologies">
-      <div className="technologies-header">
-        <p className="section-eyebrow">Tecnologías</p>
+      <p className="section-eyebrow">Tecnologías:</p>
 
-        <h2>
-          Las herramientas con las que construyo productos digitales modernos.
-        </h2>
-      </div>
+      <div className="tech-logos">
+        <FaJava />
 
-      <div className="technologies-grid">
-        {technologies.map((technology) => (
-          <div
-            key={technology.name}
-            className="technology-item"
-          >
-            {technology.name}
-          </div>
-        ))}
+        <SiHtml5 />
+        <SiCss />
+        <SiJavascript />
+
+        <SiReact />
+        <SiNextdotjs />
+        <SiTypescript />
+
+        <SiSpring />
+        <SiMysql />
+
+        <SiGit />
+        <SiGithub />
       </div>
     </section>
   );
