@@ -1,15 +1,30 @@
+import Image from "next/image";
+
 export default function Navbar() {
   return (
-    <header>
-      <nav>
-        <a href="#inicio">Daovez.</a>
+    <header className="navbar">
+      <a href="#inicio" className="logo">
+        <Image
+          src="/images/logo.png"
+          alt="Daovez"
+          width={220}
+          height={60}
+          priority
+        />
+      </a>
 
-        <div>
-          <a href="#sobre-mi">sobre mí</a>
-          <a href="#tecnologias">tecnologías</a>
-          <a href="#proyectos">proyectos</a>
-          <a href="#contacto">contacto</a>
-        </div>
+      <nav className="nav-links">
+
+      
+
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#proyectos">Proyectos</a>
+
+        <a href="#contacto" className="contact-link">
+          Contacto
+        </a>
+
       </nav>
     </header>
   );

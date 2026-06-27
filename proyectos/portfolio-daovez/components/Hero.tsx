@@ -1,24 +1,98 @@
+"use client";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+  const roles = [
+    "Software Engineer",
+    "Desarrollador Java Full Stack",
+    "Backend Developer",
+    "Frontend Developer",
+    "Founder of Daovez",
+  ];
+
+  const [text, setText] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          setText(currentRole.slice(0, text.length + 1));
+
+          if (text.length === currentRole.length) {
+            setTimeout(() => setIsDeleting(true), 1000);
+          }
+        } else {
+          setText(currentRole.slice(0, text.length - 1));
+
+          if (text.length === 0) {
+            setIsDeleting(false);
+            setRoleIndex((prev) => (prev + 1) % roles.length);
+          }
+        }
+      },
+      isDeleting ? 40 : 80
+    );
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, roleIndex, roles]);
+
   return (
-    <section id="inicio">
-      <p>FULL STACK WEB DESIGN & DEVELOPMENT</p>
+    <section id="inicio" className="hero">
+      <div className="hero-content">
+        <p className="intro">Hola, soy</p>
 
-      <h1>
-        Diseño.
-        <br />
-        Desarrollo.
-        <br />
-        Producto digital.
-      </h1>
+        <h2 className="name">David López Velasco</h2>
 
-      <p>
-        Creo aplicaciones web modernas, rápidas y escalables combinando diseño,
-        frontend y backend.
-      </p>
+        <p className="creator">
+          <span className="role-text">{text}</span>
+          <span className="typing-cursor">|</span>
+        </p>
 
-      <div>
-        <a href="#proyectos">Ver proyectos</a>
-        <a href="#contacto">Contactar</a>
+        <h1 className="hero-title">
+          DISEÑO.
+          <br />
+          DESARROLLO.
+          <br />
+          SOFTWARE.
+        </h1>
+      </div>
+
+      <div className="hero-image">
+        <Image
+          src="/images/david.png"
+          alt="David López Velasco"
+          fill
+          priority
+          className="hero-photo"
+        />
+      </div>
+
+      <div className="socials">
+        <a
+          href="https://www.linkedin.com/in/daovez/"
+          className="social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          in
+        </a>
+
+        <span className="social-separator"></span>
+
+        <a
+          href="https://github.com/daovez"
+          className="social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          gh
+        </a>
       </div>
     </section>
   );
