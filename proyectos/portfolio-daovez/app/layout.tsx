@@ -22,6 +22,9 @@ const ubuntu = Ubuntu({
 export const metadata: Metadata = {
   title: "Daovez",
   description: "Portfolio de David López Velasco",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

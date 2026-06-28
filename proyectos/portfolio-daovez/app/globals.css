@@ -25,10 +25,19 @@ section {
 }
 
 body {
-  .hero,
-section {
-  background: #ffffff;
+  cursor: none;
+  position: relative;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-ubuntu), Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
+
+.hero,section {
+  background: #ffffff;
+
   cursor: none;
   position: relative;
   min-height: 100vh;
@@ -82,7 +91,6 @@ section {
 
 /* NAVBAR */
 
-
 .navbar {
   position: fixed;
   top: 0;
@@ -99,32 +107,39 @@ section {
   justify-content: space-between;
 
   background: transparent;
+  }
+  
+.logo img {
+  width: 180px;
+  height: auto;
+  display: block;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  width: 180px;
-  height: auto;
-  z-index: 9999;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
-.logo img {
-  width: 180px;
-  height: auto;
+.logo.show {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+.logo.hide {
+  opacity: 0.2;
+  transform: translateY(-15px);
+  pointer-events: none;
+}
+
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 18px;
-}
-
-.nav-links a {
-  font-size: 14px;
-  color: var(--text);
-  opacity: 0.65;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  gap: 48px;
 }
 
 .nav-links a:hover {
@@ -133,15 +148,24 @@ section {
 }
 
 .nav-links a {
+  font-size: 15px;
+  font-weight: 500;
+
+  color: var(--text);
+
+  opacity: 0.65;
+
   transition:
+    opacity .25s ease,
     transform .35s cubic-bezier(.22,1,.36,1);
 }
+
 /* HERO */
 
 .hero {
   position: relative;
   min-height: 100vh;
-  padding: 150px 48px 60px;
+  padding: 170px 64px 80px;
   overflow: hidden;
   background: var(--background);
 }
@@ -149,28 +173,29 @@ section {
 .hero-content {
   position: relative;
   z-index: 4;
-  max-width: 760px;
+  max-width: 720px;
 }
 
 .intro {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: var(--text-secondary);
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .name {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: var(--text);
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.15;
 }
 
 .creator {
-  height: 50px;
-  margin-bottom: 44px;
+  height: 42px;
+  margin-bottom: 56px;
   overflow: hidden;
+
   color: var(--accent);
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1;
 }
@@ -191,25 +216,27 @@ section {
 }
 
 .hero-title {
-  max-width: 980px;
+  max-width: 850px;
+
   color: var(--text);
-  font-size: clamp(68px, 8vw, 142px);
+
+  font-size: clamp(58px, 6.6vw, 118px);
   font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -5px;
+  line-height: 0.95;
+  letter-spacing: -4px;
   text-transform: uppercase;
 }
-/* =========================
-   HERO IMAGE
-========================= */
+
+/* HERO IMAGE */
 
 .hero-image {
   position: absolute;
-  top: 110px;
-  right: 4%;
+  top: 145px;
+  right: 5%;
   z-index: 2;
 
-  width: 420px;
+  width: 390px;
+
   pointer-events: none;
 }
 
@@ -226,37 +253,49 @@ section {
 
 .hero-email {
   position: absolute;
-  right: 120px;
-  bottom: 140px;
+  right: 96px;
+  bottom: 110px;
   z-index: 5;
 }
 
 .hero-email a {
   position: relative;
   display: inline-block;
+
   color: var(--text);
-  font-size: 18px;
+
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.03em;
+
   transition: all 0.3s ease;
 }
 
 .hero-email a::after {
   content: "";
   position: absolute;
+
   left: -6px;
   bottom: -3px;
+
   width: calc(100% + 12px);
-  height: 30px;
-  background: rgba(255, 255, 255, 0.16);
+  height: 20px;
+
+  background: rgba(216, 187, 59, 0.35);
+
   border-radius: 20px 8px 18px 10px;
+
   transform: rotate(-1.5deg);
+
   z-index: -1;
+
+  transition: background 0.3s ease;
 }
 
 .hero-email a:hover {
   transform: translateY(-2px);
 }
+
 .hero-email a:hover::after {
   background: #d8bb3b;
 }
@@ -420,7 +459,7 @@ background: #d8bb3b;
 }
 
 .project-item:hover {
-  background: #d8bb3b;
+  background: #faf5fa;
   border-color: rgba(0, 0, 0, 0.18);
   transform: translateX(6px);
 }
@@ -514,9 +553,43 @@ background: #d8bb3b;
    RESPONSIVE
 ========================= */
 
+/* PC pequeño / portátil */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0 32px;
+  }
+
+  .hero {
+    padding: 140px 32px 60px;
+  }
+
+  .hero-title {
+    font-size: clamp(60px, 8vw, 110px);
+  }
+
+  .hero-image {
+    top: 120px;
+    right: -40px;
+    width: 420px;
+  }
+
+  .projects-panel {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .projects-content {
+    grid-template-columns: 1fr 340px;
+  }
+}
+
+/* Tablet */
 @media (max-width: 900px) {
   .navbar {
     padding: 0 24px;
+  }
+
+  .nav-links {
+    gap: 12px;
   }
 
   .hero {
@@ -524,17 +597,15 @@ background: #d8bb3b;
   }
 
   .hero-title {
-    font-size: clamp(52px, 16vw, 90px);
+    font-size: clamp(52px, 14vw, 90px);
     letter-spacing: -3px;
   }
 
   .hero-image {
-    top: 320px;
-    right: -120px;
-
+    top: 300px;
+    right: -140px;
     width: 520px;
-
-    opacity: 0.28;
+    opacity: 0.25;
   }
 
   .hero-email {
@@ -553,11 +624,86 @@ background: #d8bb3b;
     padding: 100px 24px;
   }
 
-  .projects-panel {
-    grid-template-columns: 1fr;
-  }
-
+  .projects-panel,
   .projects-content {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .navbar {
+    height: 72px;
+    padding: 0 14px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 9px;
+  }
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 350;
+}
+
+  .hero {
+    min-height: 100vh;
+    padding: 120px 18px 60px;
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+
+  .name {
+    font-size: 23px;
+  }
+
+  .creator {
+    font-size: 21px;
+    height: 32px;
+    margin-bottom: 34px;
+  }
+
+  .hero-title {
+    margin-top: 28px;
+    font-size: clamp(42px, 15vw, 64px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+  }
+
+  .hero-image {
+    top: 390px;
+    right: -170px;
+    width: 480px;
+    opacity: 0.16;
+  }
+
+  .hero-email {
+    left: 18px;
+    right: auto;
+    bottom: 45px;
+  }
+
+  .hero-email a {
+    font-size: 14px;
+  }
+
+  .socials {
+    right: 18px;
+    top: auto;
+    bottom: 45px;
+    transform: none;
+  }
+
+  section:not(.hero),
+  .technologies,
+  .projects {
+    padding: 80px 18px;
   }
 }
