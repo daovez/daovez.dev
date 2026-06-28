@@ -3,8 +3,9 @@ export default function Footer() {
 
   return (
     <footer>
-      <p>Daovez</p>
-
+    <a href="#inicio" className="footer-logo">
+  <img src="/images/logo.png" alt="Daovez" />
+</a>
       <p>
         Construido con Next.js, React y TypeScript.
       </p>

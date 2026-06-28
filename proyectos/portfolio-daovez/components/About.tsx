@@ -5,7 +5,7 @@ export default function About() {
         <p className="section-eyebrow">Sobre mí</p>
 
         <h2 className="about-title">
-          Desarrollo software con mentalidad de producto.
+Código, diseño e ilustración al servicio de ideas con sentido.
         </h2>
 
         <div className="about-content">

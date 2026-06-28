@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function Hero() {
-  const contentRef = useRef(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
 
   const roles = [
     "<Designer & Developer/>",
@@ -39,7 +39,7 @@ export default function Hero() {
   }, [text, isDeleting, roleIndex]);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       const x = e.clientX / window.innerWidth - 0.5;
       const y = e.clientY / window.innerHeight - 0.5;
 
