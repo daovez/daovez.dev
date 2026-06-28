@@ -130,7 +130,7 @@ section {
 }
 
 .logo.hide {
-  opacity: 0.2;
+  opacity: 0.2d;
   transform: translateY(-15px);
   pointer-events: none;
 }
@@ -226,18 +226,13 @@ section {
   letter-spacing: -4px;
   text-transform: uppercase;
 }
-
-/* HERO IMAGE */
-
 .hero-image {
   position: absolute;
-  top: 145px;
-  right: 5%;
+  bottom: 0;
+  left: 60%;
+  transform: translateY(-100%);
+  width: 340px;
   z-index: 2;
-
-  width: 390px;
-
-  pointer-events: none;
 }
 
 .hero-image img {
@@ -615,7 +610,7 @@ background: #d8bb3b;
   }
 
   .socials {
-    right: 24px;
+    right: 50px;
   }
 
   section:not(.hero),
@@ -630,31 +625,42 @@ background: #d8bb3b;
   }
 }
 
-/* Móvil */
+  /* =========================
+   MÓVIL
+========================= */
+
 @media (max-width: 600px) {
-  .navbar {
-    height: 72px;
-    padding: 0 14px;
-  }
-
-  .logo img {
-    width: 140px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 9px;
-  }
-
-.nav-links a {
-  font-size: 12px;
-  font-weight: 350;
+.navbar {
+  height: 105px;
+  padding: 14px 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
 }
 
-  .hero {
-    min-height: 100vh;
-    padding: 120px 18px 60px;
-  }
+.logo img {
+  width: 140px;
+}
+
+.nav-links {
+  margin-top: -30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.hero {
+  padding: 150px 18px 60px;
+}
 
   .intro {
     font-size: 14px;
@@ -675,13 +681,35 @@ background: #d8bb3b;
     font-size: clamp(42px, 15vw, 64px);
     line-height: 0.95;
     letter-spacing: -2px;
+    max-width: 100%;
   }
 
+  /* FOTO HERO */
+
   .hero-image {
-    top: 390px;
-    right: -170px;
-    width: 480px;
-    opacity: 0.16;
+    position: absolute !important;
+   
+    left: 50% !important;
+    right: auto !important;
+
+    top: auto !important;
+    bottom: 85px !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 450px !important;
+    opacity: 0.28;
+
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    
   }
 
   .hero-email {
@@ -694,16 +722,118 @@ background: #d8bb3b;
     font-size: 14px;
   }
 
-  .socials {
-    right: 18px;
-    top: auto;
-    bottom: 45px;
-    transform: none;
-  }
+/* SOCIALES */
+
+.socials {
+  position: absolute !important;
+
+  right: 18px !important;
+  left: auto !important;
+
+  bottom: 35px !important;
+  top: auto !important;
+
+  transform: none !important;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 20px;
+
+  z-index: 6;
+}
+
+.socials span {
+  display: none;
+}
+
+.socials a {
+  font-size: 25px;
+  font-weight: 500;
+  opacity: 0.85;
+}
 
   section:not(.hero),
   .technologies,
   .projects {
     padding: 80px 18px;
+  }
+
+  .about-title,
+  .tech-title,
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+
+  .projects-panel {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projects-content {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    order: -1;
+  }
+}
+/* =========================
+   TABLET / IPAD
+========================= */
+
+@media (min-width: 601px) and (max-width: 1180px) {
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    position: absolute !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    top: 900px !important;
+    bottom: auto !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 420px !important;
+    opacity: 0.28 !important;
+
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .socials {
+    position: absolute !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    top: auto !important;
+    bottom: 45px !important;
+
+    transform: translateX(-50%) !important;
+
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .socials span {
+    display: none;
   }
 }
