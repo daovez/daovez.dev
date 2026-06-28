@@ -20,10 +20,32 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: "Daovez",
-  description: "Portfolio de David López Velasco",
+  title: "Daovez | Full Stack Developer",
+  description:
+    "Portfolio de David López Velasco. Desarrollo web, diseño UI/UX, ilustración digital y proyectos Full Stack.",
+
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
+  openGraph: {
+    title: "Daovez | Full Stack Developer",
+    description:
+      "Portfolio de David López Velasco. Desarrollo web, diseño UI/UX e ilustración digital.",
+    url: "https://daovez.dev",
+    siteName: "Daovez",
+    images: [
+      {
+        url: "/hero-dev.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Daovez Portfolio",
+      },
+    ],
+    locale: "es_ES",
+    type: "website",
   },
 };
 
