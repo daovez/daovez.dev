@@ -79,10 +79,9 @@ export default function Hero() {
 
       <div className="hero-image">
         <img
-          src="/images/hero-dev.jpg"
-          alt="David programando"
-          className="hero-photo"
-        />
+  src="/images/hero-dev.JPG"
+  alt="David programando"
+/>
       </div>
 
       <div className="hero-email">

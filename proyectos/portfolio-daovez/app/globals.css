@@ -243,7 +243,23 @@ section {
   object-fit: contain;
   mix-blend-mode: multiply;
 }
+.hero::after {
+  content: "";
 
+  position: absolute;
+
+  width: 850px;
+  height: 850px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.035);
+
+  right: -180px;
+  bottom: -250px;
+
+  z-index: 0;
+}
 /* HERO EMAIL */
 
 .hero-email {
@@ -544,6 +560,95 @@ background: #d8bb3b;
   width: 250px;
   height: auto;
 }
+.ai-bot-button {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: #c7f022;
+  color: #000;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.ai-bot-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-bot-window {
+  position: relative;
+  width: min(420px, 90vw);
+  padding: 36px;
+  border-radius: 32px;
+  background: #10131c;
+  color: white;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.ai-bot-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.ai-bot-face {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #c7f022, #7789ab);
+  position: relative;
+  animation: floatFace 3s ease-in-out infinite;
+}
+
+.eye {
+  position: absolute;
+  top: 42px;
+  width: 14px;
+  height: 22px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.eye.left {
+  left: 34px;
+}
+
+.eye.right {
+  right: 34px;
+}
+
+.mouth {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  width: 36px;
+  height: 16px;
+  border-bottom: 4px solid #000;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
