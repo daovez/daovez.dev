@@ -1,109 +1,100 @@
 import "./Projects.css";
-
 import Panel from "../../components/Panel/Panel";
 
-function Projects({
-  open,
-  onClose,
-}) {
+function Projects({ open, onClose }) {
+  const projects = [
+    {
+      id: "01",
+      name: "daovez.dev",
+      description: "Portfolio personal",
+      stack: "REACT / VITE",
+      active: true,
+    },
+    {
+      id: "02",
+      name: "Próximo proyecto",
+      description: "",
+      stack: "COMING SOON",
+      active: false,
+    },
+    {
+      id: "03",
+      name: "Próximo proyecto",
+      description: "",
+      stack: "COMING SOON",
+      active: false,
+    },
+  ];
+
   return (
     <Panel
       open={open}
       onClose={onClose}
-      className="projects-panel"
+      className="projects-card"
     >
+      <div className="projects-wrapper">
 
-      <header className="section-header">
+        {/* HEADER */}
 
-        <span>
-          02
-        </span>
-
-        <p>
-          PROYECTOS
-        </p>
-
-        <h2>
-          Selected
-          <br />
-          Work.
-        </h2>
-
-      </header>
-
-
-      <div className="project-list">
-
-        <article className="project-item">
-
-          <span className="project-number">
-            01
-          </span>
-
-          <div>
-            <h3>
-              daovez.dev
-            </h3>
-
-            <p>
-              Portfolio personal
-            </p>
-          </div>
-
-          <span className="project-stack">
-            REACT / VITE
-          </span>
-
-        </article>
-
-
-        <article className="project-item">
-
-          <span className="project-number">
+        <header className="projects-header">
+          <span className="projects-number">
             02
           </span>
 
-          <div>
-            <h3>
-              Próximo proyecto
-            </h3>
-
-            <p>
-              En desarrollo
-            </p>
-          </div>
-
-          <span className="project-stack">
-            COMING SOON
+          <span className="projects-title">
+            PROYECTOS
           </span>
+        </header>
 
-        </article>
+
+        {/* LISTA */}
+
+        <div className="projects-list">
+
+          {projects.map((project) => (
+            <button
+              key={project.id}
+              className={`project-row ${
+                project.active
+                  ? "project-row-active"
+                  : "project-row-disabled"
+              }`}
+            >
+              <span className="project-number">
+                {project.id}
+              </span>
 
 
-        <article className="project-item">
+              <div className="project-info">
 
-          <span className="project-number">
-            03
-          </span>
+                <h2>
+                  {project.name}
+                </h2>
 
-          <div>
-            <h3>
-              Próximo proyecto
-            </h3>
+                {project.description && (
+                  <p>
+                    {project.description}
+                  </p>
+                )}
 
-            <p>
-              En desarrollo
-            </p>
-          </div>
+              </div>
 
-          <span className="project-stack">
-            COMING SOON
-          </span>
 
-        </article>
+              <span className="project-stack">
+                {project.stack}
+              </span>
+
+
+              <span className="project-arrow">
+                →
+              </span>
+
+            </button>
+          ))}
+
+        </div>
 
       </div>
-
     </Panel>
   );
 }

@@ -1,18 +1,20 @@
 import { useState } from "react";
-
 import "./App.css";
 
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
 import StudioLink from "./components/StudioLink/StudioLink";
+
 import About from "./sections/About/About";
 import Projects from "./sections/Projects/Projects";
-import Resources from "./sections/Resources/Resources";
 import Contact from "./sections/Contact/Contact";
+
+import Blog from "./pages/Blog/Blog";
 
 function App() {
   const [activePanel, setActivePanel] = useState(null);
+  const [currentPage, setCurrentPage] = useState("home");
 
   const openPanel = (panel) => {
     setActivePanel(panel);
@@ -24,7 +26,31 @@ function App() {
 
   const goHome = () => {
     setActivePanel(null);
+    setCurrentPage("home");
   };
+
+  const openBlog = () => {
+    setActivePanel(null);
+    setCurrentPage("blog");
+  };
+
+  /* =========================
+     BLOG
+  ========================= */
+
+  if (currentPage === "blog") {
+    return (
+      <>
+        <CustomCursor />
+
+        <Blog onBack={goHome} />
+      </>
+    );
+  }
+
+  /* =========================
+     PORTFOLIO
+  ========================= */
 
   return (
     <>
@@ -37,17 +63,18 @@ function App() {
             onHome={goHome}
             onAbout={() => openPanel("about")}
             onProjects={() => openPanel("projects")}
-            onResources={() => openPanel("resources")}
+            onBlog={openBlog}
             onContact={() => openPanel("contact")}
           />
 
           <Hero />
 
-      <footer className="card-footer">
-  <span>DAOVEZ.DEV</span>
+          <footer className="card-footer">
+            <span>DAOVEZ.DEV</span>
 
-  <StudioLink />
-</footer>
+            <StudioLink />
+          </footer>
+
           <About
             open={activePanel === "about"}
             onClose={closePanel}
@@ -55,11 +82,6 @@ function App() {
 
           <Projects
             open={activePanel === "projects"}
-            onClose={closePanel}
-          />
-
-          <Resources
-            open={activePanel === "resources"}
             onClose={closePanel}
           />
 

@@ -1,55 +1,77 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
 .navbar {
-  position: relative;
-
-  z-index: 10;
-
   width: 100%;
 
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 
-  padding: 28px 34px;
+  padding:
+    26px
+    34px;
+
+  position: relative;
+
+  z-index: 10;
 }
 
 
-/* =========================
+/* =========================================
    LOGO
-========================= */
+========================================= */
 
 .logo {
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
+
 
 .logo img {
   width: 54px;
-  height: 54px;
+  height: auto;
 
   display: block;
-
-  object-fit: contain;
-
-  transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
-}
-
-.logo:hover img {
-  transform: scale(0.95);
-
-  opacity: 0.65;
 }
 
 
-/* =========================
+.logo:hover {
+  opacity: 0.55;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================
+   DERECHA
+========================================= */
+
+.navbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+/* =========================================
    LINKS
-========================= */
+========================================= */
 
 .nav-links {
   display: flex;
@@ -59,6 +81,7 @@
   gap: 32px;
 }
 
+
 .nav-links button {
   padding: 0;
 
@@ -66,84 +89,197 @@
 
   background: transparent;
 
+  color: var(--color-black);
+
   font-size: 11px;
 
   font-weight: 600;
+
+  letter-spacing: 0.7px;
+
+  white-space: nowrap;
 
   transition:
     opacity 0.2s ease,
     transform 0.2s ease;
 }
 
+
 .nav-links button:hover {
   opacity: 0.45;
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================
+   REDES
+========================================= */
+
+.nav-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding-left: 28px;
+
+  border-left:
+    1px solid
+    rgba(17, 17, 17, 0.15);
+}
+
+
+.nav-socials a {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #111111;
+
+  font-size: 16px;
+
+  opacity: 0.55;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.nav-socials a:hover {
+  opacity: 1;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 900px) {
 
   .navbar {
-    padding: 22px 24px;
+    padding:
+      22px
+      24px;
   }
+
 
   .logo img {
-    width: 46px;
-    height: 46px;
+    width: 48px;
   }
 
-  .nav-links {
-    gap: 18px;
-  }
 
-  .nav-links button {
-    font-size: 9px;
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .navbar {
-    align-items: flex-start;
-
+  .navbar-right {
     gap: 20px;
   }
 
+
   .nav-links {
-    width: 100%;
-
-    overflow-x: auto;
-
-    justify-content: flex-end;
-
-    gap: 14px;
-
-    scrollbar-width: none;
+    gap: 20px;
   }
 
-  .nav-links::-webkit-scrollbar {
-    display: none;
+
+  .nav-links button {
+    font-size: 10px;
+  }
+
+
+  .nav-socials {
+    gap: 11px;
+
+    padding-left: 20px;
+  }
+
+
+  .nav-socials a {
+    font-size: 15px;
   }
 
 }
 
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 650px) {
+
+  .navbar {
+    padding:
+      18px
+      20px;
+
+    gap: 15px;
+  }
+
+
+  .logo img {
+    width: 42px;
+  }
+
+
+  .navbar-right {
+    gap: 14px;
+  }
+
+
+  .nav-links {
+    gap: 13px;
+  }
+
+
+  .nav-links button {
+    font-size: 8px;
+
+    letter-spacing: 0.3px;
+  }
+
+
+  .nav-socials {
+    gap: 9px;
+
+    padding-left: 13px;
+  }
+
+
+  .nav-socials a {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+========================================= */
 
 @media (max-width: 500px) {
 
   .navbar {
-    padding: 18px 20px;
+    align-items: flex-start;
   }
 
-  .logo img {
-    width: 42px;
-    height: 42px;
+
+  .navbar-right {
+    align-items: flex-end;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .nav-socials {
+    padding-left: 0;
+
+    border-left: none;
   }
 
 }
