@@ -1,0 +1,203 @@
+.hero {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.2fr
+    0.5fr;
+
+  align-items: center;
+
+  padding: 20px 50px;
+}
+
+
+/* =========================
+   IZQUIERDA
+========================= */
+
+.hero-left {
+  align-self: center;
+}
+
+.hero-tag {
+  margin: 0 0 22px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.hero-left h1 {
+  margin: 0;
+
+  font-size:
+    clamp(48px, 5vw, 86px);
+
+  line-height: 0.92;
+
+  letter-spacing: -5px;
+
+  font-weight: 600;
+}
+
+.hero-description {
+  max-width: 350px;
+
+  margin-top: 30px;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: var(--color-text-secondary);
+}
+
+
+/* =========================
+   CENTRO
+========================= */
+
+.hero-center {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.visual {
+  width: 260px;
+  height: 320px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    130px
+    130px
+    40px
+    40px;
+
+  background: var(--color-black);
+
+  color: #ffffff;
+
+  font-size: 70px;
+
+  font-weight: 700;
+
+  letter-spacing: -7px;
+
+  transform: rotate(-5deg);
+
+  box-shadow:
+    25px
+    30px
+    40px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   DERECHA
+========================= */
+
+.hero-right {
+  align-self: start;
+
+  margin-top: 80px;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  text-align: right;
+}
+
+.hero-right span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 36px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    padding: 50px 30px;
+
+    gap: 50px;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-left {
+    order: 1;
+  }
+
+  .hero-center {
+    order: 2;
+  }
+
+  .hero-left h1 {
+    letter-spacing: -3px;
+  }
+
+  .visual {
+    width: 200px;
+    height: 250px;
+
+    font-size: 55px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .hero {
+    padding:
+      40px
+      22px;
+
+    gap: 40px;
+  }
+
+  .hero-left h1 {
+    font-size: 46px;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .visual {
+    width: 175px;
+    height: 220px;
+
+    font-size: 48px;
+  }
+
+}

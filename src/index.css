@@ -1,3 +1,28 @@
+:root {
+  --color-background: #e9e9e9;
+  --color-card: #f7f7f7;
+  --color-black: #111111;
+  --color-text-secondary: #666666;
+
+  --radius-main: 28px;
+  --radius-panel: 28px;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: var(--color-black);
+  background: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,20 +33,24 @@ html {
 
 body {
   margin: 0;
+
   min-width: 320px;
   min-height: 100vh;
 
-  font-family:
-    Inter,
-    Arial,
-    Helvetica,
-    sans-serif;
+  background: var(--color-background);
+  color: var(--color-black);
+}
 
-  background: #e9e9e9;
-
-  color: #111;
+button,
+a {
+  font: inherit;
 }
 
 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
   color: inherit;
 }

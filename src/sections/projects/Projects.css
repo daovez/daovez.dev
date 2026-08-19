@@ -1,0 +1,155 @@
+.projects-panel {
+  display: grid;
+
+  grid-template-columns:
+    0.7fr
+    1.3fr;
+
+  gap: 70px;
+}
+
+
+.section-header span {
+  font-size: 12px;
+
+  opacity: 0.45;
+}
+
+.section-header p {
+  margin:
+    18px
+    0
+    25px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      48px,
+      5vw,
+      72px
+    );
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+}
+
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.project-list {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  border-top:
+    1px solid
+    rgba(17, 17, 17, 0.25);
+}
+
+.project-item {
+  min-height: 105px;
+
+  display: grid;
+
+  grid-template-columns:
+    45px
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 15px;
+
+  border-bottom:
+    1px solid
+    rgba(17, 17, 17, 0.18);
+
+  transition:
+    padding
+    0.25s ease,
+    background
+    0.25s ease;
+}
+
+.project-item:hover {
+  padding-left: 10px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.2
+    );
+}
+
+.project-number {
+  font-size: 9px;
+
+  opacity: 0.4;
+}
+
+.project-item h3 {
+  margin:
+    0
+    0
+    5px;
+
+  font-size: 20px;
+}
+
+.project-item p {
+  margin: 0;
+
+  font-size: 11px;
+
+  opacity: 0.55;
+}
+
+.project-stack {
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  opacity: 0.5;
+}
+
+
+@media (max-width: 900px) {
+
+  .projects-panel {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .project-item {
+    grid-template-columns:
+      30px
+      1fr;
+  }
+
+  .project-stack {
+    display: none;
+  }
+
+}

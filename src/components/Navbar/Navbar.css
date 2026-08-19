@@ -1,0 +1,149 @@
+.navbar {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 28px 34px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 54px;
+  height: 54px;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.logo:hover img {
+  transform: scale(0.95);
+
+  opacity: 0.65;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 32px;
+}
+
+.nav-links button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-links button:hover {
+  opacity: 0.45;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 22px 24px;
+  }
+
+  .logo img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links button {
+    font-size: 9px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    overflow-x: auto;
+
+    justify-content: flex-end;
+
+    gap: 14px;
+
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+}
