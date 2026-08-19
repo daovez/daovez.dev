@@ -1,60 +1,82 @@
 import "./About.css";
-
 import Panel from "../../components/Panel/Panel";
 
-function About({
-  open,
-  onClose,
-}) {
+import {
+  FaJava,
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaDatabase,
+} from "react-icons/fa";
+
+import { SiJavascript } from "react-icons/si";
+
+function About({ open, onClose }) {
   return (
     <Panel
       open={open}
       onClose={onClose}
       className="about-card"
     >
-
+      {/* COLUMNA IZQUIERDA */}
       <div className="about-info">
 
         <span className="about-number">
           01
         </span>
 
-        <p className="about-label">
-          SOBRE MÍ
-        </p>
+        <div className="about-top">
+          <p className="about-label">
+            SOBRE MÍ
+          </p>
+
+          <a
+            href="/cv/david-lopez-cv.pdf"
+            download
+            className="cv-download"
+            aria-label="Descargar CV"
+          >
+            <span className="cv-text">
+              CV
+            </span>
+
+            <span className="cv-arrow">
+              ↓
+            </span>
+          </a>
+        </div>
 
         <h2>
-          Desarrollo ideas
-          <br />
-          para la web.
+          Hola,
+          < br />  
+         soy David López.
+      
+         
         </h2>
 
         <p className="about-text">
-          Soy desarrollador Full Stack
-          enfocado en crear experiencias
-          digitales modernas, funcionales
-          y visualmente cuidadas.
+          DESARROLLADOR FULL STACK
         </p>
 
         <p className="about-text">
-          Desarrollo proyectos combinando
-          frontend y backend mientras
-          continúo ampliando mis
-          conocimientos en desarrollo
-          de software.
+          Desarrollo proyectos mientras amplío mis
+          conocimientos y comparto lo que aprendo
+          durante el proceso.
         </p>
 
         <div className="about-location">
-          ANTEQUERA · MÁLAGA · ESPAÑA
+         MÁLAGA · ESPAÑA
         </div>
 
       </div>
 
 
+      {/* COLUMNA DERECHA */}
       <div className="skills">
 
         <div className="skills-header">
-
           <p>
             SKILLS
           </p>
@@ -62,53 +84,75 @@ function About({
           <span>
             STACK / 2026
           </span>
-
         </div>
 
+        <div className="skills-logos">
 
-        <table className="skills-table">
+          <div
+            className="skill-icon java"
+            title="Java"
+            aria-label="Java"
+          >
+            <FaJava />
+          </div>
 
-          <tbody>
+          <div
+            className="skill-icon javascript"
+            title="JavaScript"
+            aria-label="JavaScript"
+          >
+            <SiJavascript />
+          </div>
 
-            <tr>
-              <td>01</td>
-              <td>Java</td>
-              <td>Backend / POO</td>
-            </tr>
+          <div
+            className="skill-icon react"
+            title="React"
+            aria-label="React"
+          >
+            <FaReact />
+          </div>
 
-            <tr>
-              <td>02</td>
-              <td>JavaScript</td>
-              <td>Frontend</td>
-            </tr>
+          <div
+            className="skill-icon html"
+            title="HTML"
+            aria-label="HTML"
+          >
+            <FaHtml5 />
+          </div>
 
-            <tr>
-              <td>03</td>
-              <td>React</td>
-              <td>Frontend</td>
-            </tr>
+          <div
+            className="skill-icon css"
+            title="CSS"
+            aria-label="CSS"
+          >
+            <FaCss3Alt />
+          </div>
 
-            <tr>
-              <td>04</td>
-              <td>HTML / CSS</td>
-              <td>Web</td>
-            </tr>
+          <div
+            className="skill-icon sql"
+            title="SQL"
+            aria-label="SQL"
+          >
+            <FaDatabase />
+          </div>
 
-            <tr>
-              <td>05</td>
-              <td>SQL</td>
-              <td>Database</td>
-            </tr>
+          <div
+            className="skill-icon git"
+            title="Git"
+            aria-label="Git"
+          >
+            <FaGitAlt />
+          </div>
 
-            <tr>
-              <td>06</td>
-              <td>Git / GitHub</td>
-              <td>Version Control</td>
-            </tr>
+          <div
+            className="skill-icon github"
+            title="GitHub"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </div>
 
-          </tbody>
-
-        </table>
+        </div>
 
       </div>
 

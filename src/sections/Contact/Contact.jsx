@@ -54,29 +54,33 @@ function Contact({
           </span>
         </a>
 
-        <div className="contact-placeholder">
 
+        <a
+          href="mailto:yo@daovez.com"
+        >
           <span>
             EMAIL
           </span>
 
           <span>
-            —
+            ↗
           </span>
+        </a>
 
-        </div>
 
-        <div className="contact-placeholder">
-
+        <a
+          href="https://www.linkedin.com/in/daovez/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <span>
             LINKEDIN
           </span>
 
           <span>
-            —
+            ↗
           </span>
-
-        </div>
+        </a>
 
       </div>
 

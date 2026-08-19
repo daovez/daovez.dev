@@ -8,6 +8,7 @@ function Resources({
 }) {
   const resources = [
     "Java",
+    "Python",
     "JavaScript",
     "React",
     "HTML / CSS",
@@ -21,7 +22,6 @@ function Resources({
       onClose={onClose}
       className="resources-panel"
     >
-
       <header className="resources-header">
 
         <span>
@@ -55,14 +55,8 @@ function Resources({
               className="resource-item"
               key={resource}
             >
-
               <span>
-                {String(
-                  index + 1
-                ).padStart(
-                  2,
-                  "0"
-                )}
+                {String(index + 1).padStart(2, "0")}
               </span>
 
               <strong>
@@ -72,7 +66,6 @@ function Resources({
               <span>
                 →
               </span>
-
             </button>
           )
         )}
