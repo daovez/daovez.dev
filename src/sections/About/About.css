@@ -3,6 +3,9 @@
 ========================================= */
 
 .about-card {
+  position: relative;
+  overflow: hidden;
+
   display: grid;
 
   grid-template-columns:
@@ -14,16 +17,46 @@
   align-items: stretch;
 
   background:
-    rgba(
-      255,
-      255,
-      255,
-      0.90,
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.72),
+      rgba(255, 255, 255, 0.48)
     ) !important;
 
   color: #111111;
+
+  backdrop-filter: blur(22px) saturate(130%);
+  -webkit-backdrop-filter: blur(22px) saturate(130%);
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+  border-radius: 28px;
 }
 
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    repeating-radial-gradient(
+      circle at 20% 30%,
+      rgba(255, 255, 255, 0.17) 0px,
+      rgba(255, 255, 255, 0.17) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+
+  opacity: 0.45;
+
+  mix-blend-mode: overlay;
+}
 
 /* =========================================
    COLUMNA IZQUIERDA
