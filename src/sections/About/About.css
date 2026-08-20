@@ -1,19 +1,11 @@
-/* =========================================
-   ABOUT
-========================================= */
-
 .about-card {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 
   display: grid;
-
-  grid-template-columns:
-    1fr
-    1.05fr;
-
+  grid-template-columns: 1fr 1.05fr;
   gap: 70px;
-
   align-items: stretch;
 
   background:
@@ -23,7 +15,7 @@
       rgba(255, 255, 255, 0.48)
     ) !important;
 
-  color: #111111;
+  color: #0a0a0a;
 
   backdrop-filter: blur(22px) saturate(130%);
   -webkit-backdrop-filter: blur(22px) saturate(130%);
@@ -37,11 +29,14 @@
   border-radius: 28px;
 }
 
+
+/* RUGOSIDAD */
 .about-card::before {
   content: "";
   position: absolute;
   inset: 0;
 
+  z-index: 0;
   pointer-events: none;
 
   background:
@@ -54,8 +49,14 @@
     );
 
   opacity: 0.45;
-
   mix-blend-mode: overlay;
+}
+
+
+/* CONTENIDO SIEMPRE POR ENCIMA DEL GLASS */
+.about-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================================
