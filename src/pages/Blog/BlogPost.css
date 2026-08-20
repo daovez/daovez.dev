@@ -1,0 +1,900 @@
+/* =========================================
+   PÁGINA DEL ARTÍCULO
+========================================= */
+
+.article-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding:
+    40px
+    5vw
+    100px;
+
+  background: #ffffff;
+
+  color: #111111;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.article-container {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.article-navbar {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 24px;
+
+  margin-bottom: 50px;
+
+  border-bottom:
+    1px solid
+    #e3e3e3;
+}
+
+
+/* =========================================
+   NAVBAR IZQUIERDA
+========================================= */
+
+.article-navbar-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.article-nav-logo {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.article-nav-logo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+.article-nav-logo:hover {
+  transform: scale(0.96);
+
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   ARTÍCULO 01 / POR DAOVEZ
+========================================= */
+
+.article-nav-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #555555;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+.article-nav-separator {
+  color: #bbbbbb;
+}
+
+
+/* =========================================
+   CONTADOR DE VISITAS
+========================================= */
+
+.article-visits {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 8px;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  white-space: nowrap;
+}
+
+
+.article-visits-number {
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #111111;
+}
+
+
+.article-visits-label {
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.7px;
+
+  color: #999999;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   FOTO PERFIL
+========================================= */
+
+.article-profile {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  border:
+    4px solid
+    #111111;
+
+  border-radius: 24px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   IMAGEN PERFIL
+========================================= */
+
+.article-profile img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================================
+   ZONA CENTRAL DE LECTURA
+========================================= */
+
+.article-reading {
+  width:
+    min(900px, 92%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   CABECERA
+========================================= */
+
+.article-header {
+  width: 100%;
+
+  margin:
+    0
+    auto
+    55px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   CATEGORÍA
+========================================= */
+
+.article-category {
+  display: block;
+
+  margin-bottom: 16px;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+
+  color: #999999;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.article-header h1 {
+  margin:
+    0
+    0
+    18px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(42px, 5vw, 66px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -2.5px;
+
+  color: #111111;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   DATOS DEL ARTÍCULO
+========================================= */
+
+.article-meta {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9px;
+
+  color: #888888;
+}
+
+
+.article-meta-dot {
+  color: #bbbbbb;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.article-content {
+  width: 100%;
+
+  margin: 0 auto;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  line-height: 1.75;
+
+  color: #242424;
+}
+
+
+/* =========================================
+   PÁRRAFOS
+========================================= */
+
+.article-content p {
+  margin:
+    0
+    0
+    34px;
+}
+
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+.article-content .article-intro {
+  margin-bottom: 45px;
+
+  font-size: 20px;
+
+  line-height: 1.7;
+
+  color: #191919;
+}
+
+
+/* =========================================
+   H2
+========================================= */
+
+.article-content h2 {
+  margin:
+    65px
+    0
+    25px;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  letter-spacing: -1px;
+
+  color: #111111;
+}
+
+
+/* =========================================
+   H3
+========================================= */
+
+.article-content h3 {
+  margin:
+    48px
+    0
+    20px;
+
+  font-size: 23px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  color: #111111;
+}
+
+
+/* =========================================
+   ENLACES
+========================================= */
+
+.article-content a {
+  color: #111111;
+
+  text-decoration-line: underline;
+
+  text-decoration-thickness: 1px;
+
+  text-underline-offset: 3px;
+
+  transition:
+    opacity 0.2s ease;
+}
+
+
+.article-content a:hover {
+  opacity: 0.55;
+}
+
+
+/* =========================================
+   LISTAS
+========================================= */
+
+.article-content ul,
+.article-content ol {
+  margin:
+    0
+    0
+    34px;
+
+  padding-left: 28px;
+}
+
+
+.article-content li {
+  margin-bottom: 10px;
+}
+
+
+/* =========================================
+   CÓDIGO INLINE
+========================================= */
+
+.article-content p code,
+.article-content li code {
+  padding:
+    2px
+    5px;
+
+  border-radius: 4px;
+
+  background: #f1f1f1;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 0.85em;
+}
+
+
+/* =========================================
+   BLOQUE DE CÓDIGO
+========================================= */
+
+.article-content pre {
+  width: 100%;
+
+  overflow-x: auto;
+
+  margin:
+    45px
+    0;
+
+  padding: 26px;
+
+  border:
+    1px solid
+    #e3e3e3;
+
+  border-radius: 10px;
+
+  background: #f5f5f3;
+
+  color: #222222;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+
+.article-content pre code {
+  padding: 0;
+
+  background: transparent;
+
+  color: inherit;
+
+  font: inherit;
+}
+
+
+/* =========================================
+   IMÁGENES
+========================================= */
+
+.article-content img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin:
+    45px
+    0;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   CITAS
+========================================= */
+
+.article-content blockquote {
+  margin:
+    45px
+    0;
+
+  padding:
+    5px
+    0
+    5px
+    24px;
+
+  border-left:
+    2px solid
+    #cccccc;
+
+  color: #666666;
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   SEPARADORES
+========================================= */
+
+.article-content hr {
+  margin:
+    65px
+    0;
+
+  border: 0;
+
+  border-top:
+    1px solid
+    #e3e3e3;
+}
+
+
+/* =========================================
+   BOTÓN VOLVER ARRIBA
+========================================= */
+
+.scroll-top {
+  position: fixed;
+
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 999;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+
+  border:
+    1px solid
+    #d4d4d4;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.88);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
+
+  color: #555555;
+
+  font-family:
+    Inter,
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.scroll-top:hover {
+  transform:
+    translateY(-3px);
+
+  color: #111111;
+
+  border-color: #999999;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   SELECCIÓN
+========================================= */
+
+.article-page ::selection {
+  background: #111111;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .article-page {
+    padding:
+      30px
+      4vw
+      80px;
+  }
+
+
+  .article-reading {
+    width:
+      min(760px, 94%);
+  }
+
+
+  .article-nav-logo,
+  .article-profile {
+    width: 72px;
+    height: 72px;
+  }
+
+
+  .article-profile {
+    border-width: 3px;
+
+    border-radius: 20px;
+  }
+
+
+  .article-nav-info {
+    font-size: 9px;
+
+    letter-spacing: 1.3px;
+  }
+
+
+  .article-visits-number {
+    font-size: 10px;
+  }
+
+
+  .article-visits-label {
+    font-size: 6px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+  .article-page {
+    padding:
+      20px
+      18px
+      70px;
+  }
+
+
+  .article-navbar {
+    margin-bottom: 40px;
+
+    padding-bottom: 18px;
+  }
+
+
+  .article-nav-logo,
+  .article-profile {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  .article-profile {
+    border-width: 3px;
+
+    border-radius: 16px;
+  }
+
+
+  .article-navbar-left {
+    gap: 10px;
+  }
+
+
+  .article-nav-info {
+    gap: 5px;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+  }
+
+
+  /* En móvil ocultamos el contador
+     para no saturar el navbar */
+
+  .article-visits {
+    display: none;
+  }
+
+
+  .article-reading {
+    width: 100%;
+  }
+
+
+  .article-header {
+    margin-bottom: 40px;
+  }
+
+
+  .article-category {
+    font-size: 8px;
+  }
+
+
+  .article-header h1 {
+    font-size: 40px;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+  }
+
+
+  .article-meta {
+    font-size: 8px;
+  }
+
+
+  .article-content {
+    font-size: 17px;
+
+    line-height: 1.7;
+  }
+
+
+  .article-content .article-intro {
+    font-size: 18px;
+
+    line-height: 1.65;
+  }
+
+
+  .article-content p {
+    margin-bottom: 28px;
+  }
+
+
+  .article-content h2 {
+    margin-top: 50px;
+
+    font-size: 25px;
+  }
+
+
+  .article-content pre {
+    margin:
+      35px
+      0;
+
+    padding: 18px;
+
+    font-size: 12px;
+
+    border-radius: 8px;
+  }
+
+
+  .scroll-top {
+    right: 16px;
+    bottom: 16px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 14px;
+  }
+
+}

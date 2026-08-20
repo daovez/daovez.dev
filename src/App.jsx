@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+
 import "./App.css";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -11,89 +13,142 @@ import Projects from "./sections/Projects/Projects";
 import Contact from "./sections/Contact/Contact";
 
 import Blog from "./pages/Blog/Blog";
+import BlogPost1 from "./pages/Blog/BlogPost1";
+
 
 function App() {
   const [activePanel, setActivePanel] = useState(null);
-  const [currentPage, setCurrentPage] = useState("home");
+
+  const navigate = useNavigate();
+
+
+  /* =========================
+     PANELES
+  ========================= */
 
   const openPanel = (panel) => {
     setActivePanel(panel);
   };
 
+
   const closePanel = () => {
     setActivePanel(null);
   };
 
+
+  /* =========================
+     NAVEGACIÓN
+  ========================= */
+
   const goHome = () => {
     setActivePanel(null);
-    setCurrentPage("home");
+
+    navigate("/");
   };
+
 
   const openBlog = () => {
     setActivePanel(null);
-    setCurrentPage("blog");
+
+    navigate("/blog");
   };
 
-  /* =========================
-     BLOG
-  ========================= */
-
-  if (currentPage === "blog") {
-    return (
-      <>
-        <CustomCursor />
-
-        <Blog onBack={goHome} />
-      </>
-    );
-  }
 
   /* =========================
      PORTFOLIO
+  ========================= */
+
+  const Portfolio = () => (
+    <main className="page">
+
+      <section className="portfolio-card">
+
+        <Navbar
+          onHome={goHome}
+          onAbout={() => openPanel("about")}
+          onProjects={() => openPanel("projects")}
+          onBlog={openBlog}
+          onContact={() => openPanel("contact")}
+        />
+
+
+        <Hero />
+
+
+        <footer className="card-footer">
+
+          <span>
+            DAOVEZ.DEV
+          </span>
+
+          <StudioLink />
+
+        </footer>
+
+
+        <About
+          open={activePanel === "about"}
+          onClose={closePanel}
+        />
+
+
+        <Projects
+          open={activePanel === "projects"}
+          onClose={closePanel}
+        />
+
+
+        <Contact
+          open={activePanel === "contact"}
+          onClose={closePanel}
+        />
+
+      </section>
+
+    </main>
+  );
+
+
+  /* =========================
+     APP
   ========================= */
 
   return (
     <>
       <CustomCursor />
 
-      <main className="page">
-        <section className="portfolio-card">
+      <Routes>
 
-          <Navbar
-            onHome={goHome}
-            onAbout={() => openPanel("about")}
-            onProjects={() => openPanel("projects")}
-            onBlog={openBlog}
-            onContact={() => openPanel("contact")}
-          />
+        {/* PORTFOLIO */}
+        <Route
+          path="/"
+          element={<Portfolio />}
+        />
 
-          <Hero />
 
-          <footer className="card-footer">
-            <span>DAOVEZ.DEV</span>
+        {/* BLOG */}
+        <Route
+          path="/blog"
+          element={
+            <Blog
+              onBack={goHome}
+            />
+          }
+        />
 
-            <StudioLink />
-          </footer>
 
-          <About
-            open={activePanel === "about"}
-            onClose={closePanel}
-          />
+        {/* POST 01 */}
+        <Route
+          path="/blog/post1"
+          element={
+            <BlogPost1 />
+          }
+        />
 
-          <Projects
-            open={activePanel === "projects"}
-            onClose={closePanel}
-          />
-
-          <Contact
-            open={activePanel === "contact"}
-            onClose={closePanel}
-          />
-
-        </section>
-      </main>
+      </Routes>
     </>
   );
 }
+
 
 export default App;
