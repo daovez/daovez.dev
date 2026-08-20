@@ -61,9 +61,12 @@ function About({ open, onClose }) {
         </p>
 
         <p className="about-text">
-          Desarrollo proyectos mientras amplío mis
-          conocimientos y comparto lo que aprendo
-          durante el proceso.
+    Nací en Gerona, aunque actualmente vivo en Málaga. Estudié el <u>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</u> en DIGITECH y actualmente continúo mi formación estudiando <u>Ingeniería en Inteligencia Artificial</u> en la UNED.
+
+Además de mis estudios, desarrollo proyectos por mi cuenta para seguir aprendiendo, experimentar con nuevas tecnologías y mejorar mis habilidades como desarrollador.
+
+En este portfolio comparto algunos de esos proyectos y parte de mi evolución en el mundo del desarrollo de software y la inteligencia artificial.
+
         </p>
 
         <div className="about-location">
