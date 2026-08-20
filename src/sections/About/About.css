@@ -13,7 +13,6 @@
 
   align-items: stretch;
 
-  /* MISMO ACABADO QUE PROYECTOS */
   background:
     rgba(
       255,
@@ -485,43 +484,137 @@
 
 @media (max-width: 600px) {
 
+  .about-card {
+    gap: 40px;
+  }
+
+
+  /* =====================================
+     NÚMERO
+  ===================================== */
+
+  .about-number {
+    margin-bottom: 16px;
+
+    font-size: 11px;
+  }
+
+
+  /* =====================================
+     SOBRE MÍ + CV
+  ===================================== */
+
   .about-top {
     margin-bottom: 25px;
   }
 
 
-  .about-info h2 {
-    font-size: 38px;
+  .about-label {
+    font-size: 11px;
 
-    letter-spacing: -2px;
-
-    margin-bottom: 25px;
+    letter-spacing: 2.5px;
   }
 
 
-  .about-role {
+  .cv-text {
     font-size: 10px;
   }
 
 
-  .about-text {
+  .cv-arrow {
+    font-size: 16px;
+  }
+
+
+  /* =====================================
+     TÍTULO
+  ===================================== */
+
+  .about-info h2 {
+    font-size: 42px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 26px;
+  }
+
+
+  /* =====================================
+     ROL
+  ===================================== */
+
+  .about-role {
+    margin-bottom: 22px;
+
     font-size: 12px;
 
-    line-height: 1.65;
+    line-height: 1.4;
+
+    letter-spacing: 1.2px;
   }
 
+
+  /* =====================================
+     TEXTO
+  ===================================== */
+
+  .about-text {
+    margin-bottom: 17px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* =====================================
+     LOCALIZACIÓN
+  ===================================== */
 
   .about-location {
-    margin-top: 10px;
+    margin-top: 12px;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    letter-spacing: 1.3px;
   }
 
+
+  /* =====================================
+     SKILLS
+  ===================================== */
+
+  .skills-header {
+    padding-bottom: 14px;
+  }
+
+
+  .skills-header p {
+    font-size: 11px;
+
+    letter-spacing: 2.4px;
+  }
+
+
+  .skills-header span {
+    font-size: 9px;
+  }
+
+
+  /* =====================================
+     LOGOS
+  ===================================== */
 
   .skills-logos {
     grid-template-columns:
       repeat(4, 1fr);
 
     gap:
-      28px
+      30px
       18px;
 
     padding:
@@ -532,13 +625,13 @@
 
 
   .skill-icon {
-    font-size: 28px;
+    font-size: 31px;
   }
 
 
   .skill-icon:hover {
     transform:
-      scale(1.18);
+      scale(1.15);
   }
 
 }

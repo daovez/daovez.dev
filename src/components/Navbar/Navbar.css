@@ -255,7 +255,6 @@
 
 }
 
-
 /* =========================================
    MÓVIL PEQUEÑO
 ========================================= */
@@ -264,22 +263,102 @@
 
   .navbar {
     align-items: flex-start;
+
+    padding:
+      18px
+      20px;
+
+    gap: 14px;
   }
 
 
+  /* =====================================
+     LOGO
+  ===================================== */
+
+  .logo img {
+    width: 44px;
+  }
+
+
+  /* =====================================
+     ZONA DERECHA
+  ===================================== */
+
   .navbar-right {
-    align-items: flex-end;
+    display: flex;
 
     flex-direction: column;
 
-    gap: 10px;
+    align-items: flex-end;
+
+    gap: 12px;
   }
 
 
+  /* =====================================
+     MENÚ
+  ===================================== */
+
+  .nav-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 14px;
+  }
+
+
+  .nav-links button {
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =====================================
+     REDES SOCIALES
+  ===================================== */
+
   .nav-socials {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 11px;
+
     padding-left: 0;
 
     border-left: none;
+  }
+
+
+  .nav-socials a {
+    font-size: 16px;
+
+    opacity: 0.55;
+  }
+
+
+  /* =====================================
+     HOVER / TOUCH
+  ===================================== */
+
+  .nav-links button:hover {
+    transform: none;
+  }
+
+
+  .nav-socials a:hover {
+    transform: none;
   }
 
 }

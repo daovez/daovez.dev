@@ -1,3 +1,7 @@
+/* =========================================
+   HERO
+========================================= */
+
 .hero {
   flex: 1;
 
@@ -10,33 +14,54 @@
 
   align-items: center;
 
-  padding: 20px 50px;
+  padding:
+    20px
+    50px;
 }
 
 
-/* =========================
+/* =========================================
    IZQUIERDA
-========================= */
+========================================= */
 
 .hero-left {
   align-self: center;
 }
 
+
+/* =========================================
+   ETIQUETA
+========================================= */
+
 .hero-tag {
-  margin: 0 0 22px;
+  margin:
+    0
+    0
+    22px;
 
   font-size: 10px;
+
+  font-weight: 500;
 
   letter-spacing: 2px;
 
   text-transform: uppercase;
 }
 
+
+/* =========================================
+   TÍTULO
+========================================= */
+
 .hero-left h1 {
   margin: 0;
 
   font-size:
-    clamp(48px, 5vw, 86px);
+    clamp(
+      48px,
+      5vw,
+      86px
+    );
 
   line-height: 0.92;
 
@@ -44,6 +69,11 @@
 
   font-weight: 600;
 }
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
 
 .hero-description {
   max-width: 350px;
@@ -54,13 +84,14 @@
 
   line-height: 1.6;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 }
 
 
-/* =========================
+/* =========================================
    CENTRO
-========================= */
+========================================= */
 
 .hero-center {
   display: flex;
@@ -68,6 +99,11 @@
   justify-content: center;
   align-items: center;
 }
+
+
+/* =========================================
+   ELEMENTO DV
+========================================= */
 
 .visual {
   width: 260px;
@@ -84,7 +120,8 @@
     40px
     40px;
 
-  background: var(--color-black);
+  background:
+    var(--color-black);
 
   color: #ffffff;
 
@@ -94,7 +131,8 @@
 
   letter-spacing: -7px;
 
-  transform: rotate(-5deg);
+  transform:
+    rotate(-5deg);
 
   box-shadow:
     25px
@@ -104,9 +142,9 @@
 }
 
 
-/* =========================
+/* =========================================
    DERECHA
-========================= */
+========================================= */
 
 .hero-right {
   align-self: start;
@@ -120,6 +158,7 @@
   text-align: right;
 }
 
+
 .hero-right span {
   display: block;
 
@@ -131,35 +170,60 @@
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 900px) {
 
   .hero {
     grid-template-columns: 1fr;
 
-    padding: 50px 30px;
+    padding:
+      50px
+      30px;
 
     gap: 50px;
   }
+
 
   .hero-right {
     display: none;
   }
 
+
   .hero-left {
     order: 1;
   }
+
 
   .hero-center {
     order: 2;
   }
 
+
+  .hero-tag {
+    font-size: 11px;
+  }
+
+
   .hero-left h1 {
+    font-size: 56px;
+
+    line-height: 0.94;
+
     letter-spacing: -3px;
   }
+
+
+  .hero-description {
+    max-width: 420px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
 
   .visual {
     width: 200px;
@@ -171,6 +235,10 @@
 }
 
 
+/* =========================================
+   MÓVIL
+========================================= */
+
 @media (max-width: 500px) {
 
   .hero {
@@ -181,23 +249,51 @@
     gap: 40px;
   }
 
+
+  /* ETIQUETA */
+
+  .hero-tag {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.7px;
+  }
+
+
+  /* TÍTULO */
+
   .hero-left h1 {
-    font-size: 46px;
+    font-size: 50px;
 
     line-height: 0.95;
 
     letter-spacing: -2px;
   }
 
+
+  /* DESCRIPCIÓN */
+
   .hero-description {
-    font-size: 12px;
+    max-width: 100%;
+
+    margin-top: 26px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
   }
+
+
+  /* ELEMENTO DV */
 
   .visual {
     width: 175px;
     height: 220px;
 
     font-size: 48px;
+
+    letter-spacing: -5px;
   }
 
 }
