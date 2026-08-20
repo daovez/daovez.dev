@@ -1,5 +1,6 @@
 /* =========================================
    PROJECTS
+   MISMO ESTILO VISUAL QUE ABOUT
 ========================================= */
 
 .projects-card {
@@ -9,9 +10,7 @@
 
   display: block;
 
-  /* GLASS + RUGOSIDAD */
   background:
-
     repeating-radial-gradient(
       circle at 20% 30%,
       rgba(255, 255, 255, 0.17) 0px,
@@ -19,7 +18,6 @@
       transparent 1px,
       transparent 3px
     ),
-
     linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.72),
@@ -36,19 +34,19 @@
     blur(22px)
     saturate(130%);
 
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.55);
+  border: none;
+
+  border-radius: 28px;
 
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
-
-  border-radius: 28px;
 }
+
 
 /* =========================================
    CONTENEDOR
+   IGUAL QUE ABOUT
 ========================================= */
 
 .projects-wrapper {
@@ -63,7 +61,7 @@
 
 
 /* =========================================
-   CABECERA
+   HEADER
 ========================================= */
 
 .projects-header {
@@ -80,7 +78,8 @@
 
 
 /* =========================================
-   NÚMERO
+   02
+   MISMO QUE 01 DE ABOUT
 ========================================= */
 
 .projects-number {
@@ -88,12 +87,15 @@
 
   font-weight: 400;
 
+  color: #111111;
+
   opacity: 0.32;
 }
 
 
 /* =========================================
-   TÍTULO
+   PROYECTOS
+   MISMO QUE SOBRE MÍ
 ========================================= */
 
 .projects-title {
@@ -104,6 +106,8 @@
   letter-spacing: 3px;
 
   text-transform: uppercase;
+
+  color: #111111;
 }
 
 
@@ -116,20 +120,18 @@
 
   border-top:
     1px solid
-    rgba(
-      17,
-      17,
-      17,
-      0.14
-    );
+    rgba(17, 17, 17, 0.14);
 }
 
 
 /* =========================================
-   PROYECTO
+   FILA
 ========================================= */
 
 .project-row {
+  appearance: none;
+  -webkit-appearance: none;
+
   width: 100%;
 
   min-height: 105px;
@@ -138,7 +140,7 @@
 
   grid-template-columns:
     45px
-    1fr
+    minmax(0, 1fr)
     auto
     28px;
 
@@ -146,24 +148,29 @@
 
   gap: 22px;
 
+  margin: 0;
+
   padding: 0;
 
   border: none;
 
   border-bottom:
     1px solid
-    rgba(
-      17,
-      17,
-      17,
-      0.12
-    );
+    rgba(17, 17, 17, 0.14);
+
+  border-radius: 0;
 
   background: transparent;
 
+  box-shadow: none;
+
   color: #111111;
 
+  font: inherit;
+
   text-align: left;
+
+  cursor: pointer;
 
   transition:
     transform 0.25s
@@ -173,7 +180,8 @@
         0.2,
         1
       ),
-    opacity 0.25s ease;
+    opacity 0.25s ease,
+    background-color 0.25s ease;
 }
 
 
@@ -188,13 +196,15 @@
 
 
 /* =========================================
-   NÚMERO DEL PROYECTO
+   NÚMERO DE PROYECTO
 ========================================= */
 
 .project-number {
   font-size: 9px;
 
   font-weight: 400;
+
+  color: #111111;
 
   opacity: 0.32;
 }
@@ -211,6 +221,7 @@
 
 /* =========================================
    NOMBRE
+   MISMA TIPOGRAFÍA FUERTE QUE ABOUT
 ========================================= */
 
 .project-info h2 {
@@ -218,32 +229,37 @@
 
   font-size:
     clamp(
-      20px,
-      2vw,
-      27px
+      30px,
+      3vw,
+      44px
     );
 
   font-weight: 650;
 
   line-height: 1;
 
-  letter-spacing: -1px;
+  letter-spacing: -2px;
+
+  color: #111111;
 }
 
 
 /* =========================================
    DESCRIPCIÓN
+   MISMO TEXTO QUE ABOUT
 ========================================= */
 
 .project-info p {
   margin:
-    8px
+    10px
     0
     0;
 
-  font-size: 13px;
+  font-size: 12px;
 
-  line-height: 1.7;
+  font-weight: 400;
+
+  line-height: 1.65;
 
   color:
     rgba(
@@ -260,6 +276,8 @@
 ========================================= */
 
 .project-stack {
+  justify-self: end;
+
   font-size: 9px;
 
   font-weight: 500;
@@ -270,6 +288,8 @@
 
   text-transform: uppercase;
 
+  color: #111111;
+
   opacity: 0.45;
 }
 
@@ -279,9 +299,15 @@
 ========================================= */
 
 .project-arrow {
+  justify-self: end;
+
   font-size: 18px;
 
+  font-weight: 300;
+
   line-height: 1;
+
+  color: #111111;
 
   opacity: 0.4;
 
@@ -301,16 +327,37 @@
 
 
 /* =========================================
-   PROYECTOS PRÓXIMOS
+   PROYECTO ACTIVO
+========================================= */
+
+.project-row-active {
+  opacity: 1;
+}
+
+
+/* =========================================
+   PRÓXIMOS PROYECTOS
 ========================================= */
 
 .project-row-disabled {
   opacity: 0.27;
+
+  cursor: default;
+}
+
+
+/* =========================================
+   SIN MOVIMIENTO EN DESACTIVADOS
+========================================= */
+
+.project-row-disabled:hover {
+  transform: none;
 }
 
 
 /* =========================================
    BOTÓN CERRAR
+   MISMO QUE ABOUT
 ========================================= */
 
 .projects-card .panel-close {
@@ -358,7 +405,7 @@
 
     grid-template-columns:
       35px
-      1fr
+      minmax(0, 1fr)
       auto
       24px;
 
@@ -367,12 +414,16 @@
 
 
   .project-info h2 {
-    font-size: 22px;
+    font-size: 36px;
+
+    letter-spacing: -2px;
   }
 
 
   .project-info p {
-    font-size: 13px;
+    font-size: 12px;
+
+    line-height: 1.65;
   }
 
 
@@ -396,10 +447,6 @@
   }
 
 
-  /* =====================================
-     NÚMERO + PROYECTOS
-  ===================================== */
-
   .projects-number {
     font-size: 11px;
   }
@@ -412,76 +459,51 @@
   }
 
 
-  /* =====================================
-     FILAS
-  ===================================== */
-
   .project-row {
     min-height: 92px;
 
     grid-template-columns:
       30px
-      1fr
+      minmax(0, 1fr)
       22px;
 
     gap: 14px;
   }
 
 
-  /* =====================================
-     NÚMERO
-  ===================================== */
-
   .project-number {
     font-size: 10px;
   }
 
 
-  /* =====================================
-     NOMBRE
-  ===================================== */
-
   .project-info h2 {
-    font-size: 21px;
+    font-size: 30px;
 
-    line-height: 1.05;
+    line-height: 1;
 
-    letter-spacing: -0.6px;
+    letter-spacing: -1.5px;
   }
 
-
-  /* =====================================
-     DESCRIPCIÓN
-  ===================================== */
 
   .project-info p {
-    margin-top: 7px;
+    margin-top: 8px;
 
-    font-size: 14px;
+    font-size: 11px;
 
-    line-height: 1.7;
+    line-height: 1.6;
   }
 
-
-  /* =====================================
-     STACK
-  ===================================== */
 
   .project-stack {
     display: none;
   }
 
 
-  /* =====================================
-     FLECHA
-  ===================================== */
-
   .project-arrow {
     font-size: 18px;
   }
 
 
-  /* En móvil no desplazamos la fila */
   .project-row-active:hover {
     transform: none;
   }

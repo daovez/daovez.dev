@@ -7,33 +7,36 @@ function Blog() {
 
       <section className="blog-card">
 
-        {/* =========================
-            CABECERA
-        ========================= */}
+        {/* CERRAR - IGUAL QUE ABOUT / PROJECTS */}
+
+        <Link
+          to="/"
+          className="blog-close"
+          aria-label="Volver al portfolio"
+        >
+          ×
+        </Link>
+
+
+        {/* HEADER */}
 
         <header className="blog-header">
-
-          <Link to="/" className="blog-back">
-            ← Volver
-          </Link>
 
           <div className="blog-heading">
 
             <span className="blog-label">
               BLOG PERSONAL
-              <span>/</span>
+              <span> / </span>
               DAOVEZ
             </span>
 
-            <h1>
-              Notas, código
-              <br />
-              y aprendizaje.
-            </h1>
+<h1>
+  Notas, código y aprendizaje.
+</h1>
+
 
             <p>
-              Programación, desarrollo web,
-              inteligencia artificial y proyectos.
+              Programación, desarrollo web, inteligencia artificial y proyectos.
             </p>
 
           </div>
@@ -41,25 +44,23 @@ function Blog() {
         </header>
 
 
-        {/* =========================
-            ARTÍCULOS
-        ========================= */}
+        {/* LISTA */}
 
         <section className="blog-list">
-
-          {/* POST 01 */}
 
           <Link
             to="/blog/post1"
             className="blog-row blog-row-active"
           >
-            <span className="blog-number">
+
+            <span className="blog-row-number">
               01
             </span>
 
-            <div className="blog-row-main">
 
-              <span className="blog-category">
+            <div className="blog-row-info">
+
+              <span className="blog-row-category">
                 PROGRAMACIÓN
               </span>
 
@@ -69,28 +70,28 @@ function Blog() {
 
             </div>
 
-            <span className="blog-date">
+
+            <span className="blog-row-date">
               20.08.2026
             </span>
 
-            <span className="blog-arrow">
+
+            <span className="blog-row-arrow">
               →
             </span>
 
           </Link>
 
 
-          {/* POST 02 */}
-
           <div className="blog-row blog-row-empty">
 
-            <span className="blog-number">
+            <span className="blog-row-number">
               02
             </span>
 
-            <div className="blog-row-main">
+            <div className="blog-row-info">
 
-              <span className="blog-category">
+              <span className="blog-row-category">
                 PRÓXIMAMENTE
               </span>
 
@@ -100,28 +101,26 @@ function Blog() {
 
             </div>
 
-            <span className="blog-date">
+            <span className="blog-row-date">
               —
             </span>
 
-            <span className="blog-arrow">
+            <span className="blog-row-arrow">
               →
             </span>
 
           </div>
 
 
-          {/* POST 03 */}
-
           <div className="blog-row blog-row-empty">
 
-            <span className="blog-number">
+            <span className="blog-row-number">
               03
             </span>
 
-            <div className="blog-row-main">
+            <div className="blog-row-info">
 
-              <span className="blog-category">
+              <span className="blog-row-category">
                 PRÓXIMAMENTE
               </span>
 
@@ -131,28 +130,26 @@ function Blog() {
 
             </div>
 
-            <span className="blog-date">
+            <span className="blog-row-date">
               —
             </span>
 
-            <span className="blog-arrow">
+            <span className="blog-row-arrow">
               →
             </span>
 
           </div>
 
 
-          {/* POST 04 */}
-
           <div className="blog-row blog-row-empty">
 
-            <span className="blog-number">
+            <span className="blog-row-number">
               04
             </span>
 
-            <div className="blog-row-main">
+            <div className="blog-row-info">
 
-              <span className="blog-category">
+              <span className="blog-row-category">
                 PRÓXIMAMENTE
               </span>
 
@@ -162,11 +159,11 @@ function Blog() {
 
             </div>
 
-            <span className="blog-date">
+            <span className="blog-row-date">
               —
             </span>
 
-            <span className="blog-arrow">
+            <span className="blog-row-arrow">
               →
             </span>
 
@@ -175,9 +172,7 @@ function Blog() {
         </section>
 
 
-        {/* =========================
-            FOOTER
-        ========================= */}
+        {/* FOOTER */}
 
         <footer className="blog-footer">
 

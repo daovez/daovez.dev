@@ -7,6 +7,7 @@
   min-height: 100vh;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
 
@@ -25,20 +26,25 @@
       rgba(255, 255, 255, 0.35),
       rgba(0, 0, 0, 0.015)
     ),
-    var(--color-background, #efefec);
+    #f3f3f1;
+
+  color: #111111;
 }
 
 
 /* =========================================
-   TARJETA
+   TARJETA BLOG
 ========================================= */
 
 .blog-card {
   position: relative;
 
-  width: min(1400px, 92vw);
+  width:
+    min(1400px, 92vw);
 
-  height: min(780px, 82vh);
+  height:
+    min(780px, 82vh);
+
   min-height: 600px;
 
   display: flex;
@@ -48,21 +54,79 @@
 
   background: #ffffff;
 
-  border: 4px solid #111111;
+  border:
+    4px solid
+    #111111;
 
-  border-radius:
-    var(--radius-main, 36px);
+  border-radius: 36px;
 
   box-shadow:
-    0 45px 100px rgba(0, 0, 0, 0.22),
-    0 15px 35px rgba(0, 0, 0, 0.10);
-
-  color: #111111;
+    0 45px 100px
+    rgba(0, 0, 0, 0.28),
+    0 15px 35px
+    rgba(0, 0, 0, 0.12);
 }
 
 
 /* =========================================
-   CABECERA BLOG
+   CERRAR
+   IGUAL QUE ABOUT / PROJECTS
+========================================= */
+
+.blog-close {
+  position: absolute;
+
+  top: 22px;
+  right: 26px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #111111;
+
+  font-family: inherit;
+
+  font-size: 30px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  z-index: 10;
+
+  cursor: pointer;
+
+  opacity: 1;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.blog-close:hover {
+  transform:
+    rotate(90deg);
+
+  opacity: 0.45;
+}
+
+
+/* =========================================
+   HEADER
 ========================================= */
 
 .blog-header {
@@ -71,70 +135,32 @@
   width: 100%;
 
   display: flex;
+
   justify-content: center;
   align-items: flex-start;
 
   padding:
-    38px
+    32px
     42px
-    30px;
+    22px;
 }
 
 
 /* =========================================
-   VOLVER
-========================================= */
-
-.blog-back {
-  position: absolute;
-
-  top: 38px;
-  left: 42px;
-
-  display: inline-flex;
-  align-items: center;
-
-  color: #8c8c8c;
-
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-
-  font-size: 10px;
-
-  font-weight: 500;
-
-  letter-spacing: 0.3px;
-
-  text-decoration: none;
-
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.blog-back:hover {
-  color: #111111;
-
-  transform: translateX(-3px);
-}
-
-
-/* =========================================
-   BLOQUE CENTRAL
+   CABECERA CENTRAL
 ========================================= */
 
 .blog-heading {
   width: 100%;
-  max-width: 620px;
+
+  max-width: 1100px;
 
   margin: 0;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 
   text-align: center;
@@ -148,42 +174,35 @@
 .blog-label {
   display: block;
 
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-size: 9px;
 
-  font-size: 8px;
+  font-weight: 500;
 
-  font-weight: 600;
+  letter-spacing: 3px;
 
-  letter-spacing: 1.8px;
+  text-transform: uppercase;
 
-  color: #8d8d8d;
-
-  text-align: center;
+  color: #888888;
 }
+
 
 .blog-label span {
   margin:
     0
-    7px;
+    8px;
 
-  color: #cacaca;
+  opacity: 0.45;
 }
 
 
 /* =========================================
    TÍTULO
+   UNA SOLA LÍNEA EN ESCRITORIO
 ========================================= */
 
 .blog-heading h1 {
-  width: 100%;
-
   margin: 0;
 
   font-family:
@@ -192,17 +211,21 @@
     serif;
 
   font-size:
-    clamp(32px, 4vw, 50px);
+    clamp(
+      34px,
+      3.5vw,
+      50px
+    );
 
   font-weight: 400;
 
-  line-height: 0.98;
+  line-height: 1;
 
   letter-spacing: -2px;
 
   color: #111111;
 
-  text-align: center;
+  white-space: nowrap;
 }
 
 
@@ -211,34 +234,23 @@
 ========================================= */
 
 .blog-heading p {
-  max-width: 390px;
-
   margin:
     18px
-    auto
+    0
     0;
 
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 400;
 
   line-height: 1.6;
 
   color: #777777;
-
-  text-align: center;
 }
 
 
 /* =========================================
-   LISTA
+   LISTA BLOG
 ========================================= */
 
 .blog-list {
@@ -246,28 +258,30 @@
     calc(100% - 84px);
 
   margin:
-    auto
+    16px
     42px
     0;
 
   border-top:
     1px solid
-    #dedede;
+    rgba(17, 17, 17, 0.16);
 }
 
 
 /* =========================================
-   FILAS
+   FILA
 ========================================= */
 
 .blog-row {
-  min-height: 75px;
+  width: 100%;
+
+  min-height: 72px;
 
   display: grid;
 
   grid-template-columns:
     55px
-    1fr
+    minmax(0, 1fr)
     100px
     30px;
 
@@ -281,31 +295,28 @@
 
   border-bottom:
     1px solid
-    #dedede;
+    rgba(17, 17, 17, 0.14);
 
   color: #111111;
 
   text-decoration: none;
 
   transition:
-    background 0.25s ease,
-    padding 0.25s ease;
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 
 /* =========================================
-   POST ACTIVO
+   FILA ACTIVA
 ========================================= */
 
 .blog-row-active {
   cursor: pointer;
 }
 
-.blog-row-active:hover {
-  padding:
-    0
-    18px;
 
+.blog-row-active:hover {
   background: #f4f4f2;
 }
 
@@ -314,26 +325,22 @@
    NÚMERO
 ========================================= */
 
-.blog-number {
-  font-family:
-    Inter,
-    sans-serif;
+.blog-row-number {
+  font-size: 9px;
 
-  font-size: 8px;
-
-  font-weight: 500;
+  font-weight: 400;
 
   letter-spacing: 1px;
 
-  color: #9b9b9b;
+  color: #999999;
 }
 
 
 /* =========================================
-   CONTENIDO FILA
+   INFORMACIÓN
 ========================================= */
 
-.blog-row-main {
+.blog-row-info {
   min-width: 0;
 }
 
@@ -342,30 +349,28 @@
    CATEGORÍA
 ========================================= */
 
-.blog-category {
+.blog-row-category {
   display: block;
 
-  margin-bottom: 5px;
-
-  font-family:
-    Inter,
-    sans-serif;
+  margin-bottom: 6px;
 
   font-size: 7px;
 
   font-weight: 600;
 
-  letter-spacing: 1.4px;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
 
   color: #999999;
 }
 
 
 /* =========================================
-   TÍTULO POST
+   NOMBRE ARTÍCULO
 ========================================= */
 
-.blog-row h2 {
+.blog-row-info h2 {
   margin: 0;
 
   font-family:
@@ -373,16 +378,15 @@
     "Times New Roman",
     serif;
 
-  font-size:
-    clamp(16px, 1.7vw, 22px);
+  font-size: 22px;
 
   font-weight: 400;
 
-  line-height: 1.1;
+  line-height: 1.05;
 
-  letter-spacing: -0.5px;
+  letter-spacing: -0.7px;
 
-  color: #161616;
+  color: #111111;
 }
 
 
@@ -390,20 +394,18 @@
    FECHA
 ========================================= */
 
-.blog-date {
-  font-family:
-    Inter,
-    sans-serif;
+.blog-row-date {
+  justify-self: end;
 
   font-size: 7px;
 
   font-weight: 500;
 
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
 
   color: #999999;
 
-  text-align: right;
+  white-space: nowrap;
 }
 
 
@@ -411,44 +413,44 @@
    FLECHA
 ========================================= */
 
-.blog-arrow {
+.blog-row-arrow {
+  justify-self: end;
+
   font-size: 15px;
 
   font-weight: 300;
 
-  color: #888888;
-
-  text-align: right;
+  color: #777777;
 
   transition:
     transform 0.25s ease,
     color 0.25s ease;
 }
 
-.blog-row-active:hover .blog-arrow {
-  color: #111111;
 
-  transform: translateX(4px);
+.blog-row-active:hover
+.blog-row-arrow {
+  transform:
+    translateX(4px);
+
+  color: #111111;
 }
 
 
 /* =========================================
-   POSTS VACÍOS
+   FILAS PRÓXIMAMENTE
 ========================================= */
 
 .blog-row-empty {
+  opacity: 0.25;
+
   cursor: default;
 }
 
-.blog-row-empty h2 {
-  color: #bdbdbd;
-}
 
-.blog-row-empty .blog-category,
-.blog-row-empty .blog-number,
-.blog-row-empty .blog-date,
-.blog-row-empty .blog-arrow {
-  color: #c4c4c4;
+.blog-row-empty
+.blog-row-info h2 {
+  color: #777777;
 }
 
 
@@ -457,25 +459,26 @@
 ========================================= */
 
 .blog-footer {
+  width: 100%;
+
   display: flex;
 
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
+  margin-top: auto;
 
   padding:
     20px
-    42px
-    24px;
+    42px;
 
-  font-family:
-    Inter,
-    sans-serif;
-
-  font-size: 7px;
+  font-size: 8px;
 
   font-weight: 600;
 
   letter-spacing: 1.3px;
+
+  text-transform: uppercase;
 
   color: #999999;
 }
@@ -488,7 +491,7 @@
 @media (max-width: 900px) {
 
   .blog-page {
-    padding: 15px;
+    padding: 20px;
   }
 
 
@@ -498,42 +501,39 @@
     height: auto;
 
     min-height:
-      calc(100vh - 30px);
+      calc(100vh - 40px);
+
+    border-radius: 30px;
   }
 
 
   .blog-header {
     padding:
-      30px
-      28px
+      55px
+      32px
       25px;
   }
 
 
-  .blog-back {
-    top: 30px;
-    left: 28px;
-  }
-
-
   .blog-heading {
-    max-width: 500px;
+    max-width: 720px;
   }
 
 
   .blog-heading h1 {
-    font-size:
-      clamp(30px, 6vw, 44px);
+    font-size: 40px;
+
+    white-space: normal;
   }
 
 
   .blog-list {
     width:
-      calc(100% - 56px);
+      calc(100% - 64px);
 
     margin:
-      auto
-      28px
+      15px
+      32px
       0;
   }
 
@@ -541,19 +541,25 @@
   .blog-row {
     grid-template-columns:
       40px
-      1fr
-      80px
-      25px;
+      minmax(0, 1fr)
+      85px
+      24px;
 
     gap: 14px;
+
+    min-height: 70px;
+  }
+
+
+  .blog-row-info h2 {
+    font-size: 20px;
   }
 
 
   .blog-footer {
     padding:
-      18px
-      28px
-      22px;
+      22px
+      32px;
   }
 
 }
@@ -566,83 +572,93 @@
 @media (max-width: 600px) {
 
   .blog-page {
+    min-height: 100svh;
+
+    align-items: flex-start;
+
     padding: 8px;
   }
 
 
   .blog-card {
-    min-height:
-      calc(100vh - 16px);
+    width: 100%;
 
-    border-width: 2px;
+    height: auto;
+
+    min-height:
+      calc(100svh - 16px);
+
+    border-width: 3px;
 
     border-radius: 22px;
   }
 
 
-  .blog-header {
-    display: block;
+  /* =========================
+     CERRAR
+  ========================= */
 
-    padding:
-      24px
-      20px
-      26px;
+  .blog-close {
+    top: 15px;
+    right: 17px;
   }
 
 
-  .blog-back {
-    position: static;
+  /* =========================
+     HEADER
+  ========================= */
 
-    display: inline-flex;
-
-    margin-bottom: 30px;
+  .blog-header {
+    padding:
+      60px
+      22px
+      22px;
   }
 
 
   .blog-heading {
     max-width: 100%;
-
-    margin: 0 auto;
   }
 
 
   .blog-label {
+    margin-bottom: 14px;
+
     font-size: 7px;
 
-    letter-spacing: 1.4px;
-  }
-
-
-  .blog-label span {
-    margin:
-      0
-      5px;
+    letter-spacing: 2px;
   }
 
 
   .blog-heading h1 {
-    font-size: 34px;
+    font-size: 32px;
+
+    line-height: 1.05;
 
     letter-spacing: -1.5px;
+
+    white-space: normal;
   }
 
 
   .blog-heading p {
-    max-width: 290px;
+    margin-top: 16px;
 
-    margin-top: 14px;
-
-    font-size: 9px;
+    font-size: 10px;
   }
 
 
+  /* =========================
+     LISTA
+  ========================= */
+
   .blog-list {
     width:
-      calc(100% - 40px);
+      calc(100% - 36px);
 
     margin:
-      auto
-      20px
+      12px
+      18px
       0;
   }
 
@@ -651,45 +667,59 @@
     min-height: 70px;
 
     grid-template-columns:
-      28px
-      1fr
-      20px;
+      25px
+      minmax(0, 1fr)
+      18px;
 
     gap: 10px;
 
-    padding: 0;
-  }
-
-
-  .blog-row-active:hover {
     padding:
       0
       5px;
   }
 
 
-  .blog-row h2 {
-    font-size: 17px;
+  .blog-row-number {
+    font-size: 8px;
   }
 
 
-  .blog-date {
+  .blog-row-category {
+    margin-bottom: 5px;
+
+    font-size: 6px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .blog-row-info h2 {
+    font-size: 18px;
+
+    letter-spacing: -0.5px;
+  }
+
+
+  .blog-row-date {
     display: none;
   }
 
 
-  .blog-category {
-    font-size: 6px;
+  .blog-row-arrow {
+    font-size: 14px;
   }
 
 
+  /* =========================
+     FOOTER
+  ========================= */
+
   .blog-footer {
     padding:
-      16px
       20px
-      20px;
+      18px;
 
-    font-size: 6px;
+    font-size: 7px;
   }
 
 }

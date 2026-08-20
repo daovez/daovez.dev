@@ -1,43 +1,19 @@
+/* =========================================
+   ABOUT
+   MISMA BASE QUE PROJECTS
+========================================= */
+
 .about-card {
   position: relative;
   overflow: hidden;
   isolation: isolate;
 
-  display: grid;
-  grid-template-columns: 1fr 1.05fr;
-  gap: 70px;
-  align-items: stretch;
+  display: block;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.72),
-      rgba(255, 255, 255, 0.48)
-    ) !important;
-
-  color: #0a0a0a;
-
-  backdrop-filter: blur(22px) saturate(130%);
-  -webkit-backdrop-filter: blur(22px) saturate(130%);
-
-  border: 1px solid rgba(255, 255, 255, 0.55);
-
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
-
-  border-radius: 28px;
-}
-
-
-/* RUGOSIDAD */
-.about-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  z-index: 0;
-  pointer-events: none;
+  /* EXACTAMENTE MISMO TAMAÑO QUE PROJECTS */
+  width: min(1100px, 92%);
+  height: 520px;
+  min-height: 520px;
 
   background:
     repeating-radial-gradient(
@@ -46,25 +22,39 @@
       rgba(255, 255, 255, 0.17) 1px,
       transparent 1px,
       transparent 3px
-    );
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.72),
+      rgba(255, 255, 255, 0.48)
+    ) !important;
 
-  opacity: 0.45;
-  mix-blend-mode: overlay;
-}
+  color: #0a0a0a;
 
+  backdrop-filter:
+    blur(22px)
+    saturate(130%);
 
-/* CONTENIDO SIEMPRE POR ENCIMA DEL GLASS */
-.about-card > * {
-  position: relative;
-  z-index: 1;
+  -webkit-backdrop-filter:
+    blur(22px)
+    saturate(130%);
+border: 4px solid #111111;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+  border-radius: 28px;
 }
 
 /* =========================================
-   COLUMNA IZQUIERDA
+   CONTENEDOR
+   IGUAL QUE PROJECTS-WRAPPER
 ========================================= */
 
-.about-info {
-  min-width: 0;
+.about-wrapper {
+  width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -74,15 +64,29 @@
 
 
 /* =========================================
+   CABECERA
+========================================= */
+
+.about-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  margin-bottom: 38px;
+}
+
+
+/* =========================================
    NÚMERO
 ========================================= */
 
 .about-number {
-  display: block;
-
-  margin-bottom: 18px;
-
   font-size: 10px;
+
   font-weight: 400;
 
   opacity: 0.32;
@@ -90,24 +94,10 @@
 
 
 /* =========================================
-   SOBRE MÍ + CV
+   TÍTULO
 ========================================= */
 
-.about-top {
-  width: 100%;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  margin-bottom: 38px;
-}
-
-
-.about-label {
-  margin: 0;
-
+.about-title {
   font-size: 10px;
 
   font-weight: 650;
@@ -119,10 +109,115 @@
 
 
 /* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+.about-content {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.9fr;
+
+  gap: 70px;
+
+  border-top:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.14
+    );
+
+  padding-top: 38px;
+}
+
+
+/* =========================================
+   INFORMACIÓN
+========================================= */
+
+.about-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   TÍTULO + CV
+========================================= */
+
+.about-heading-row {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   NOMBRE
+========================================= */
+
+.about-info h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      30px,
+      3vw,
+      44px
+    );
+
+  font-weight: 650;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+
+/* =========================================
+   ROL
+========================================= */
+
+.about-role {
+  margin:
+    14px
+    0
+    0;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+
+  opacity: 0.45;
+}
+
+
+/* =========================================
    CV
 ========================================= */
 
 .cv-download {
+  flex-shrink: 0;
+
   display: inline-flex;
 
   align-items: center;
@@ -138,8 +233,7 @@
   opacity: 0.4;
 
   transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+    opacity 0.2s ease;
 }
 
 
@@ -169,76 +263,31 @@
 }
 
 
-.cv-download:hover .cv-arrow {
+.cv-download:hover
+.cv-arrow {
   transform:
     translateY(3px);
 }
 
 
 /* =========================================
-   TÍTULO
+   DESCRIPCIÓN
 ========================================= */
 
-.about-info h2 {
-  max-width: 520px;
-
-  margin:
-    0
-    0
-    32px;
-
-  font-size:
-    clamp(
-      38px,
-      3.6vw,
-      58px
-    );
-
-  font-weight: 650;
-
-  line-height: 1;
-
-  letter-spacing: -3px;
-}
-
-
-/* =========================================
-   ROL
-========================================= */
-
-.about-role {
-  margin:
-    0
-    0
-    25px;
-
-  font-size: 11px;
-
-  font-weight: 500;
-
-  letter-spacing: 1.4px;
-
-  text-transform: uppercase;
-
-  opacity: 0.72;
-}
-
-
-/* =========================================
-   TEXTO
-========================================= */
-
-.about-text {
+.about-description {
   max-width: 500px;
+}
 
+
+.about-description p {
   margin:
     0
     0
-    18px;
+    14px;
 
-  font-size: 13px;
+  font-size: 12px;
 
-  line-height: 1.7;
+  line-height: 1.65;
 
   color:
     rgba(
@@ -250,18 +299,40 @@
 }
 
 
+.about-description p:last-child {
+  margin-bottom: 0;
+}
+
+
+.about-description u {
+  color:
+    rgba(
+      17,
+      17,
+      17,
+      0.78
+    );
+
+  text-decoration-thickness: 1px;
+
+  text-underline-offset: 3px;
+}
+
+
 /* =========================================
    LOCALIZACIÓN
 ========================================= */
 
 .about-location {
-  margin-top: 15px;
+  display: block;
+
+  margin-top: 20px;
 
   font-size: 9px;
 
   font-weight: 500;
 
-  letter-spacing: 1.6px;
+  letter-spacing: 1.4px;
 
   text-transform: uppercase;
 
@@ -277,15 +348,12 @@
   min-width: 0;
 
   display: flex;
-
   flex-direction: column;
-
-  justify-content: center;
 }
 
 
 /* =========================================
-   CABECERA SKILLS
+   HEADER SKILLS
 ========================================= */
 
 .skills-header {
@@ -310,23 +378,33 @@
 }
 
 
-.skills-header p {
-  margin: 0;
+/* =========================================
+   SKILLS TÍTULO
+========================================= */
 
+.skills-title {
   font-size: 10px;
 
   font-weight: 650;
 
   letter-spacing: 3px;
+
+  text-transform: uppercase;
 }
 
 
-.skills-header span {
+/* =========================================
+   STACK / 2026
+========================================= */
+
+.skills-year {
   font-size: 8px;
 
   font-weight: 500;
 
   letter-spacing: 1.3px;
+
+  text-transform: uppercase;
 
   opacity: 0.38;
 }
@@ -349,13 +427,13 @@
   justify-items: center;
 
   gap:
-    45px
-    35px;
+    40px
+    30px;
 
   padding:
-    55px
-    20px
-    35px;
+    45px
+    10px
+    20px;
 }
 
 
@@ -367,10 +445,9 @@
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  font-size: 35px;
+  font-size: 34px;
 
   color:
     rgba(
@@ -388,16 +465,13 @@
         0.8,
         0.2,
         1
-      ),
-    opacity 0.25s ease;
+      );
 }
 
 
 .skill-icon:hover {
   transform:
     scale(1.25);
-
-  opacity: 1;
 }
 
 
@@ -445,13 +519,9 @@
 }
 
 
-.skill-icon.python:hover {
-  color: #3776ab;
-}
-
-
 /* =========================================
    BOTÓN CERRAR
+   IGUAL QUE PROJECTS
 ========================================= */
 
 .about-card .panel-close {
@@ -472,27 +542,44 @@
 
 @media (max-width: 900px) {
 
-  .about-card {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
+  .about-wrapper {
+    justify-content: flex-start;
   }
 
 
-  .about-info {
-    justify-content: flex-start;
+  .about-header {
+    margin-bottom: 30px;
+  }
+
+
+  .about-number {
+    font-size: 10px;
+  }
+
+
+  .about-title {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .about-content {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding-top: 30px;
   }
 
 
   .about-info h2 {
-    font-size: 46px;
-
-    letter-spacing: -3px;
+    font-size: 36px;
   }
 
 
-  .skills {
-    justify-content: flex-start;
+  .about-description p {
+    font-size: 12px;
   }
 
 
@@ -501,12 +588,17 @@
       repeat(4, 1fr);
 
     gap:
-      35px
-      25px;
+      30px
+      20px;
 
     padding:
-      40px
+      35px
       10px;
+  }
+
+
+  .skill-icon {
+    font-size: 30px;
   }
 
 }
@@ -518,148 +610,103 @@
 
 @media (max-width: 600px) {
 
-  .about-card {
-    gap: 40px;
-  }
+  .about-header {
+    gap: 14px;
 
-
-  /* =====================================
-     NÚMERO
-  ===================================== */
-
-  .about-number {
-    margin-bottom: 16px;
-
-    font-size: 11px;
-  }
-
-
-  /* =====================================
-     SOBRE MÍ + CV
-  ===================================== */
-
-  .about-top {
     margin-bottom: 25px;
   }
 
 
-  .about-label {
+  .about-number {
+    font-size: 11px;
+  }
+
+
+  .about-title {
     font-size: 11px;
 
     letter-spacing: 2.5px;
   }
 
 
-  .cv-text {
-    font-size: 10px;
+  .about-content {
+    gap: 35px;
+
+    padding-top: 25px;
   }
 
 
-  .cv-arrow {
-    font-size: 16px;
+  .about-heading-row {
+    margin-bottom: 22px;
   }
 
-
-  /* =====================================
-     TÍTULO
-  ===================================== */
 
   .about-info h2 {
-    font-size: 42px;
+    font-size: 30px;
 
     line-height: 1;
 
-    letter-spacing: -2px;
-
-    margin-bottom: 26px;
+    letter-spacing: -1.5px;
   }
 
-
-  /* =====================================
-     ROL
-  ===================================== */
 
   .about-role {
-    margin-bottom: 22px;
-
-    font-size: 12px;
-
-    line-height: 1.4;
-
-    letter-spacing: 1.2px;
-  }
-
-
-  /* =====================================
-     TEXTO
-  ===================================== */
-
-  .about-text {
-    margin-bottom: 17px;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-  }
-
-
-  /* =====================================
-     LOCALIZACIÓN
-  ===================================== */
-
-  .about-location {
     margin-top: 12px;
 
-    font-size: 10px;
-
-    line-height: 1.5;
-
-    letter-spacing: 1.3px;
+    font-size: 9px;
   }
 
 
-  /* =====================================
-     SKILLS
-  ===================================== */
+  .about-description p {
+    margin-bottom: 13px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+
+
+  .about-location {
+    margin-top: 18px;
+
+    font-size: 8px;
+  }
+
 
   .skills-header {
     padding-bottom: 14px;
   }
 
 
-  .skills-header p {
-    font-size: 11px;
+  .skills-title {
+    font-size: 10px;
 
-    letter-spacing: 2.4px;
+    letter-spacing: 2.5px;
   }
 
 
-  .skills-header span {
-    font-size: 9px;
+  .skills-year {
+    font-size: 8px;
   }
 
-
-  /* =====================================
-     LOGOS
-  ===================================== */
 
   .skills-logos {
     grid-template-columns:
       repeat(4, 1fr);
 
     gap:
-      30px
-      18px;
+      25px
+      15px;
 
     padding:
-      35px
+      30px
       5px
-      20px;
+      15px;
   }
 
 
   .skill-icon {
-    font-size: 31px;
+    font-size: 27px;
   }
 
 
