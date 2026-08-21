@@ -16,6 +16,8 @@
 
   text-decoration: none;
 
+  cursor: pointer;
+
   transition:
     opacity 0.25s ease,
     transform 0.25s ease;
@@ -34,9 +36,6 @@
 
   object-fit: contain;
 
-  /* IMPORTANTE:
-     NO aplicar brightness(0)
-  */
   filter: none;
 
   opacity: 0.85;
@@ -51,120 +50,12 @@
    HOVER
 ========================================= */
 
-.studio-link:hover .studio-footer-logo {
+.studio-link:hover
+.studio-footer-logo {
   opacity: 1;
 
   transform:
     translateX(3px);
-}
-
-
-/* =========================================
-   TRANSICIÓN
-========================================= */
-
-.studio-transition {
-  position: fixed;
-
-  inset: 0;
-
-  z-index: 999999;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  background: #111111;
-
-  color: #ffffff;
-
-  animation:
-    studioScreenIn
-    0.65s
-    cubic-bezier(0.76, 0, 0.24, 1)
-    forwards;
-}
-
-
-.studio-transition-content {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
-
-  animation:
-    studioTextIn
-    0.7s
-    ease
-    0.25s
-    both;
-}
-
-
-.transition-small {
-  margin-bottom: 15px;
-
-  font-size: 8px;
-
-  font-weight: 500;
-
-  letter-spacing: 4px;
-
-  opacity: 0.45;
-}
-
-
-.transition-title {
-  font-size:
-    clamp(
-      50px,
-      7vw,
-      110px
-    );
-
-  font-weight: 600;
-
-  line-height: 0.82;
-
-  letter-spacing: -6px;
-}
-
-
-/* =========================================
-   ANIMACIONES
-========================================= */
-
-@keyframes studioScreenIn {
-
-  from {
-    transform: translateY(100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-
-}
-
-
-@keyframes studioTextIn {
-
-  from {
-    opacity: 0;
-
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform: translateY(0);
-  }
-
 }
 
 
@@ -192,13 +83,9 @@
   }
 
 
-  .studio-link:hover .studio-footer-logo {
+  .studio-link:hover
+  .studio-footer-logo {
     transform: none;
-  }
-
-
-  .transition-title {
-    letter-spacing: -3px;
   }
 
 }
@@ -213,12 +100,6 @@
   .studio-link,
   .studio-footer-logo {
     transition: none;
-  }
-
-
-  .studio-transition,
-  .studio-transition-content {
-    animation-duration: 0.01ms;
   }
 
 }
