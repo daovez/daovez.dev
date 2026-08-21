@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap");
+
+
 /* =========================================
    HERO
 ========================================= */
@@ -32,10 +35,17 @@
 
 .hero-left {
   min-width: 0;
+
   align-self: center;
 
-  transform: translateY(-24px);
+  transform:
+    translateY(-24px);
 }
+
+
+/* =========================================
+   DESARROLLADOR FULL STACK
+========================================= */
 
 .hero-tag {
   margin:
@@ -44,20 +54,40 @@
     28px;
 
   font-size: 10px;
+
   font-weight: 500;
+
   letter-spacing: 2px;
+
   text-transform: uppercase;
 }
+
+
+/* =========================================
+   TÍTULO PRINCIPAL
+========================================= */
 
 .hero-left h1 {
   margin: 0;
 
   max-width: 430px;
 
-  font-size: clamp(48px, 4.6vw, 76px);
+  font-family:
+    "Ubuntu",
+    sans-serif;
+
+  font-size:
+    clamp(
+      48px,
+      4.6vw,
+      76px
+    );
+
+  font-weight: 500;
+
   line-height: 0.95;
-  letter-spacing: -4.5px;
-  font-weight: 600;
+
+  letter-spacing: -4px;
 }
 
 
@@ -69,9 +99,15 @@
   min-width: 0;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 }
+
+
+/* =========================================
+   BLOQUE DV
+========================================= */
 
 .visual {
   width: 250px;
@@ -80,6 +116,7 @@
   flex-shrink: 0;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -89,14 +126,19 @@
     40px
     40px;
 
-  background: var(--color-black);
+  background:
+    var(--color-black);
+
   color: #ffffff;
 
   font-size: 68px;
+
   font-weight: 700;
+
   letter-spacing: -7px;
 
-  transform: rotate(-5deg);
+  transform:
+    rotate(-5deg);
 
   box-shadow:
     25px
@@ -121,6 +163,7 @@
 ========================================= */
 
 @media (max-width: 900px) {
+
   .hero {
     grid-template-columns: 1fr;
 
@@ -132,30 +175,46 @@
       80px;
   }
 
+
   .hero-left {
     order: 1;
-    transform: translateY(-12px);
+
+    transform:
+      translateY(-12px);
   }
+
 
   .hero-center {
     order: 2;
   }
 
+
   .hero-right-hidden {
     display: none;
   }
+
 
   .hero-tag {
     font-size: 11px;
   }
 
+
   .hero-left h1 {
     max-width: 550px;
 
-    font-size: 56px;
-    line-height: 0.95;
+    font-family:
+      "Ubuntu",
+      sans-serif;
+
+    font-size: 58px;
+
+    font-weight: 500;
+
+    line-height: 0.94;
+
     letter-spacing: -3px;
   }
+
 
   .visual {
     width: 200px;
@@ -163,6 +222,7 @@
 
     font-size: 55px;
   }
+
 }
 
 
@@ -171,39 +231,85 @@
 ========================================= */
 
 @media (max-width: 500px) {
+
   .hero {
     row-gap: 36px;
 
     padding:
       28px
-      22px
+      20px
       75px;
   }
 
+
   .hero-left {
-    transform: translateY(-8px);
+    transform:
+      translateY(-8px);
   }
+
 
   .hero-tag {
     margin-bottom: 20px;
 
-    font-size: 11px;
-    letter-spacing: 1.7px;
+    font-size: 12px;
+
+    letter-spacing: 1.6px;
   }
+
 
   .hero-left h1 {
+    width: 100%;
     max-width: 100%;
 
-    font-size: 50px;
-    line-height: 0.95;
-    letter-spacing: -2px;
+    font-family:
+      "Ubuntu",
+      sans-serif;
+
+    font-size:
+      clamp(
+        55px,
+        15vw,
+        60px
+      );
+
+    font-weight: 500;
+
+    line-height: 0.92;
+
+    letter-spacing: -2.8px;
   }
+
 
   .visual {
     width: 175px;
     height: 220px;
 
-    font-size: 48px;
+    font-size: 50px;
+
     letter-spacing: -5px;
   }
+
+}
+
+
+/* =========================================
+   MÓVIL MUY PEQUEÑO
+========================================= */
+
+@media (max-width: 380px) {
+
+  .hero {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  .hero-left h1 {
+    font-size: 55px;
+
+    line-height: 0.92;
+
+    letter-spacing: -2.7px;
+  }
+
 }
