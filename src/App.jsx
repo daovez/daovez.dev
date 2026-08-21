@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 
 import "./App.css";
 
@@ -10,7 +14,6 @@ import StudioLink from "./components/StudioLink/StudioLink";
 
 import About from "./sections/About/About";
 import Projects from "./sections/Projects/Projects";
-import Contact from "./sections/Contact/Contact";
 
 import Blog from "./pages/Blog/Blog";
 import BlogPost1 from "./pages/Blog/BlogPost1";
@@ -22,23 +25,27 @@ function App() {
   const navigate = useNavigate();
 
 
-  /* =========================
-     PANELES
-  ========================= */
+  /* =========================================
+     ABRIR PANEL
+  ========================================= */
 
   const openPanel = (panel) => {
     setActivePanel(panel);
   };
 
 
+  /* =========================================
+     CERRAR PANEL
+  ========================================= */
+
   const closePanel = () => {
     setActivePanel(null);
   };
 
 
-  /* =========================
-     NAVEGACIÓN
-  ========================= */
+  /* =========================================
+     INICIO
+  ========================================= */
 
   const goHome = () => {
     setActivePanel(null);
@@ -47,6 +54,10 @@ function App() {
   };
 
 
+  /* =========================================
+     BLOG
+  ========================================= */
+
   const openBlog = () => {
     setActivePanel(null);
 
@@ -54,64 +65,98 @@ function App() {
   };
 
 
-  /* =========================
+  /* =========================================
      PORTFOLIO
-  ========================= */
+  ========================================= */
 
-  const Portfolio = () => (
-    <main className="page">
+  const Portfolio = () => {
+    return (
+      <main className="page">
 
-      <section className="portfolio-card">
+        {/* =====================================
+            VÍDEO DE FONDO
+        ===================================== */}
 
-        <Navbar
-          onHome={goHome}
-          onAbout={() => openPanel("about")}
-          onProjects={() => openPanel("projects")}
-          onBlog={openBlog}
-          onContact={() => openPanel("contact")}
-        />
-
-
-        <Hero />
-
-
-        <footer className="card-footer">
-
-          <span>
-            DAOVEZ.DEV
-          </span>
-
-          <StudioLink />
-
-        </footer>
+        <video
+          className="page-background-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source
+            src="/background.mp4"
+            type="video/mp4"
+          />
+        </video>
 
 
-        <About
-          open={activePanel === "about"}
-          onClose={closePanel}
-        />
+        {/* =====================================
+            CAPA SOBRE EL VÍDEO
+        ===================================== */}
+
+        <div className="page-background-overlay" />
 
 
-        <Projects
-          open={activePanel === "projects"}
-          onClose={closePanel}
-        />
+        {/* =====================================
+            TARJETA PRINCIPAL
+        ===================================== */}
+
+        <section className="portfolio-card">
+
+          {/* NAVBAR */}
+
+          <Navbar
+            onHome={goHome}
+            onAbout={() => openPanel("about")}
+            onProjects={() => openPanel("projects")}
+            onBlog={openBlog}
+          />
 
 
-        <Contact
-          open={activePanel === "contact"}
-          onClose={closePanel}
-        />
+          {/* HERO */}
 
-      </section>
-
-    </main>
-  );
+          <Hero />
 
 
-  /* =========================
-     APP
-  ========================= */
+          {/* STUDIO */}
+
+          <footer className="card-footer">
+            <StudioLink />
+          </footer>
+
+
+          {/* =====================================
+              SOBRE MÍ
+          ===================================== */}
+
+          <About
+            open={activePanel === "about"}
+            onClose={closePanel}
+          />
+
+
+          {/* =====================================
+              PROYECTOS
+          ===================================== */}
+
+          <Projects
+            open={activePanel === "projects"}
+            onClose={closePanel}
+          />
+
+        </section>
+
+      </main>
+    );
+  };
+
+
+  /* =========================================
+     RUTAS
+  ========================================= */
 
   return (
     <>
@@ -119,14 +164,12 @@ function App() {
 
       <Routes>
 
-        {/* PORTFOLIO */}
         <Route
           path="/"
           element={<Portfolio />}
         />
 
 
-        {/* BLOG */}
         <Route
           path="/blog"
           element={
@@ -137,12 +180,9 @@ function App() {
         />
 
 
-        {/* POST 01 */}
         <Route
           path="/blog/post1"
-          element={
-            <BlogPost1 />
-          }
+          element={<BlogPost1 />}
         />
 
       </Routes>

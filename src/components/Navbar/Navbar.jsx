@@ -5,8 +5,10 @@ import {
   FaGithub,
   FaLinkedinIn,
   FaInstagram,
-  FaXTwitter,
-} from "react-icons/fa6";
+} from "react-icons/fa";
+
+import { FaXTwitter } from "react-icons/fa6";
+
 
 function Navbar({
   onHome,
@@ -16,36 +18,75 @@ function Navbar({
 }) {
   return (
     <nav className="navbar">
-      {/* LOGO */}
-      <button
-        className="logo"
-        onClick={onHome}
-        aria-label="Volver al inicio"
-      >
-        <img
-          src={logo}
-          alt="Daovez"
-        />
-      </button>
 
-      {/* DERECHA */}
+      {/* =========================================
+          IZQUIERDA
+      ========================================= */}
+
+      <div className="brand">
+
+        <button
+          className="logo"
+          onClick={onHome}
+          aria-label="Volver al inicio"
+          type="button"
+        >
+          <img
+            src={logo}
+            alt="Daovez"
+          />
+        </button>
+
+
+        <span className="brand-text">
+          portafolio daovez
+        </span>
+
+      </div>
+
+
+      {/* =========================================
+          DERECHA
+      ========================================= */}
+
       <div className="navbar-right">
+
+        {/* MENÚ */}
+
         <div className="nav-links">
-          <button onClick={onAbout}>
+
+          <button
+            type="button"
+            onClick={onAbout}
+          >
             SOBRE MÍ
           </button>
 
-          <button onClick={onProjects}>
+
+          <button
+            type="button"
+            onClick={onProjects}
+          >
             PROYECTOS
           </button>
 
-          <button onClick={onBlog}>
+
+          <button
+            type="button"
+            onClick={onBlog}
+          >
             BLOG
           </button>
+
         </div>
 
-        {/* REDES */}
+
+        {/* =========================================
+            REDES
+        ========================================= */}
+
         <div className="nav-socials">
+
           <a
             href="https://github.com/daovez"
             target="_blank"
@@ -54,6 +95,7 @@ function Navbar({
           >
             <FaGithub />
           </a>
+
 
           <a
             href="https://www.linkedin.com/in/daovez/"
@@ -64,27 +106,29 @@ function Navbar({
             <FaLinkedinIn />
           </a>
 
+
           <a
-            href="https://x.com/daovez"
-            target="_blank"
-            rel="noreferrer"
+            href="#"
             aria-label="X"
           >
             <FaXTwitter />
           </a>
 
+
           <a
-            href="https://www.instagram.com/daovez/"
-            target="_blank"
-            rel="noreferrer"
+            href="#"
             aria-label="Instagram"
           >
             <FaInstagram />
           </a>
+
         </div>
+
       </div>
+
     </nav>
   );
 }
+
 
 export default Navbar;

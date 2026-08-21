@@ -34,18 +34,27 @@
 
 /* =========================================
    TARJETA BLOG
+   EXACTAMENTE IGUAL QUE INICIO
 ========================================= */
 
 .blog-card {
   position: relative;
 
   width:
-    min(1400px, 92vw);
+    min(
+      1240px,
+      91vw
+    );
 
   height:
-    min(780px, 82vh);
+    min(
+      700px,
+      84vh
+    );
 
-  min-height: 600px;
+  min-height: 0;
+
+  flex-shrink: 0;
 
   display: flex;
   flex-direction: column;
@@ -58,7 +67,7 @@
     4px solid
     #111111;
 
-  border-radius: 36px;
+  border-radius: 32px;
 
   box-shadow:
     0 45px 100px
@@ -70,7 +79,6 @@
 
 /* =========================================
    CERRAR
-   IGUAL QUE ABOUT / PROJECTS
 ========================================= */
 
 .blog-close {
@@ -199,7 +207,6 @@
 
 /* =========================================
    TÍTULO
-   UNA SOLA LÍNEA EN ESCRITORIO
 ========================================= */
 
 .blog-heading h1 {
@@ -491,7 +498,7 @@
 @media (max-width: 900px) {
 
   .blog-page {
-    padding: 20px;
+    padding: 15px;
   }
 
 
@@ -501,9 +508,11 @@
     height: auto;
 
     min-height:
-      calc(100vh - 40px);
+      calc(
+        100vh - 30px
+      );
 
-    border-radius: 30px;
+    border-radius: 28px;
   }
 
 
@@ -529,7 +538,9 @@
 
   .blog-list {
     width:
-      calc(100% - 64px);
+      calc(
+        100% - 64px
+      );
 
     margin:
       15px
@@ -586,17 +597,19 @@
     height: auto;
 
     min-height:
-      calc(100svh - 16px);
+      calc(
+        100svh - 16px
+      );
 
-    border-width: 3px;
+    border-width: 2px;
 
     border-radius: 22px;
   }
 
 
-  /* =========================
+  /* =========================================
      CERRAR
-  ========================= */
+  ========================================= */
 
   .blog-close {
     top: 15px;
@@ -604,9 +617,9 @@
   }
 
 
-  /* =========================
+  /* =========================================
      HEADER
-  ========================= */
+  ========================================= */
 
   .blog-header {
     padding:
@@ -648,13 +661,15 @@
   }
 
 
-  /* =========================
+  /* =========================================
      LISTA
-  ========================= */
+  ========================================= */
 
   .blog-list {
     width:
-      calc(100% - 36px);
+      calc(
+        100% - 36px
+      );
 
     margin:
       12px
@@ -710,9 +725,9 @@
   }
 
 
-  /* =========================
+  /* =========================================
      FOOTER
-  ========================= */
+  ========================================= */
 
   .blog-footer {
     padding:

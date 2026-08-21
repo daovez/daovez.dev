@@ -23,10 +23,6 @@ function About({ open, onClose }) {
     >
       <div className="about-wrapper">
 
-        {/* =========================================
-            HEADER
-        ========================================= */}
-
         <header className="about-header">
 
           <span className="about-number">
@@ -40,13 +36,7 @@ function About({ open, onClose }) {
         </header>
 
 
-        {/* =========================================
-            CONTENIDO
-        ========================================= */}
-
         <div className="about-content">
-
-          {/* COLUMNA IZQUIERDA */}
 
           <div className="about-info">
 
@@ -123,10 +113,6 @@ function About({ open, onClose }) {
 
           </div>
 
-
-          {/* =========================================
-              SKILLS
-          ========================================= */}
 
           <div className="skills">
 
@@ -226,5 +212,6 @@ function About({ open, onClose }) {
     </Panel>
   );
 }
+
 
 export default About;

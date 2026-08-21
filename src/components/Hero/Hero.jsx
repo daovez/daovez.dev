@@ -2,16 +2,9 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <section
-      className="hero"
-      id="inicio"
-    >
-
+    <section className="hero">
       <div className="hero-left">
-
-        <p className="hero-tag">
-          DESARROLLADOR FULL STACK
-        </p>
+        <p className="hero-tag">DESARROLLADOR FULL STACK</p>
 
         <h1>
           Imagino
@@ -20,33 +13,13 @@ function Hero() {
           <br />
           Comparto.
         </h1>
-
       </div>
-
 
       <div className="hero-center">
-
-        <div className="visual">
-          DV
-        </div>
-
+        <div className="visual">DV</div>
       </div>
 
-
-      <div className="hero-right">
-
-        <span>
-          01
-        </span>
-
-        <p>
-          PORTFOLIO
-          <br />
-          2026
-        </p>
-
-      </div>
-
+      <div className="hero-right hero-right-hidden" />
     </section>
   );
 }

@@ -2,8 +2,10 @@ import { useState } from "react";
 
 import "./StudioLink.css";
 
+
 function StudioLink() {
   const [leaving, setLeaving] = useState(false);
+
 
   const handleStudioClick = (event) => {
     event.preventDefault();
@@ -11,34 +13,33 @@ function StudioLink() {
     setLeaving(true);
 
     setTimeout(() => {
-      window.location.href = "https://daovezstudio.com";
+      window.location.href = "https://daovez.com";
     }, 1100);
   };
+
 
   return (
     <>
       <a
-        href="https://daovezstudio.com"
+        href="https://daovez.com"
         className="studio-link"
         onClick={handleStudioClick}
-        aria-label="Ir a Daovez Studio"
+        aria-label="Ir a Daovez Studio Web"
       >
-        <span className="studio-content">
 
-          {/* TEXTO + FLECHA */}
-          <span className="studio-main">
-            <span>
-              DAOVEZ STUDIO
-            </span>
+        <img
+          src="/logo2.png"
+          alt="Daovez Studio Web"
+          className="studio-footer-logo"
+        />
 
-            <span className="studio-arrow-line" />
-          </span>
-
-        </span>
       </a>
 
 
-      {/* TRANSICIÓN AL STUDIO */}
+      {/* =========================================
+          TRANSICIÓN AL STUDIO
+      ========================================= */}
+
       {leaving && (
         <div className="studio-transition">
 
@@ -63,5 +64,6 @@ function StudioLink() {
     </>
   );
 }
+
 
 export default StudioLink;

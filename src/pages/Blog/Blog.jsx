@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+
 import "./Blog.css";
+
 
 function Blog() {
   return (
@@ -7,7 +9,9 @@ function Blog() {
 
       <section className="blog-card">
 
-        {/* CERRAR - IGUAL QUE ABOUT / PROJECTS */}
+        {/* =====================================
+            CERRAR
+        ===================================== */}
 
         <Link
           to="/"
@@ -18,7 +22,9 @@ function Blog() {
         </Link>
 
 
-        {/* HEADER */}
+        {/* =====================================
+            HEADER
+        ===================================== */}
 
         <header className="blog-header">
 
@@ -26,13 +32,18 @@ function Blog() {
 
             <span className="blog-label">
               BLOG PERSONAL
-              <span> / </span>
+
+              <span>
+                /
+              </span>
+
               DAOVEZ
             </span>
 
-<h1>
-  Notas, código y aprendizaje.
-</h1>
+
+            <h1>
+              Notas, código y aprendizaje.
+            </h1>
 
 
             <p>
@@ -44,9 +55,15 @@ function Blog() {
         </header>
 
 
-        {/* LISTA */}
+        {/* =====================================
+            LISTA
+        ===================================== */}
 
         <section className="blog-list">
+
+          {/* =================================
+              ARTÍCULO 01
+          ================================= */}
 
           <Link
             to="/blog/post1"
@@ -63,6 +80,7 @@ function Blog() {
               <span className="blog-row-category">
                 PROGRAMACIÓN
               </span>
+
 
               <h2>
                 Título del primer artículo
@@ -83,11 +101,16 @@ function Blog() {
           </Link>
 
 
+          {/* =================================
+              ARTÍCULO 02
+          ================================= */}
+
           <div className="blog-row blog-row-empty">
 
             <span className="blog-row-number">
               02
             </span>
+
 
             <div className="blog-row-info">
 
@@ -95,15 +118,18 @@ function Blog() {
                 PRÓXIMAMENTE
               </span>
 
+
               <h2>
                 Nuevo artículo
               </h2>
 
             </div>
 
+
             <span className="blog-row-date">
               —
             </span>
+
 
             <span className="blog-row-arrow">
               →
@@ -111,6 +137,10 @@ function Blog() {
 
           </div>
 
+
+          {/* =================================
+              ARTÍCULO 03
+          ================================= */}
 
           <div className="blog-row blog-row-empty">
 
@@ -118,11 +148,13 @@ function Blog() {
               03
             </span>
 
+
             <div className="blog-row-info">
 
               <span className="blog-row-category">
                 PRÓXIMAMENTE
               </span>
+
 
               <h2>
                 Nuevo artículo
@@ -130,9 +162,11 @@ function Blog() {
 
             </div>
 
+
             <span className="blog-row-date">
               —
             </span>
+
 
             <span className="blog-row-arrow">
               →
@@ -141,11 +175,16 @@ function Blog() {
           </div>
 
 
+          {/* =================================
+              ARTÍCULO 04
+          ================================= */}
+
           <div className="blog-row blog-row-empty">
 
             <span className="blog-row-number">
               04
             </span>
+
 
             <div className="blog-row-info">
 
@@ -153,15 +192,18 @@ function Blog() {
                 PRÓXIMAMENTE
               </span>
 
+
               <h2>
                 Nuevo artículo
               </h2>
 
             </div>
 
+
             <span className="blog-row-date">
               —
             </span>
+
 
             <span className="blog-row-arrow">
               →
@@ -172,15 +214,17 @@ function Blog() {
         </section>
 
 
-        {/* FOOTER */}
+        {/* =====================================
+            FOOTER
+        ===================================== */}
 
         <footer className="blog-footer">
 
-          <span>
-            DAOVEZ.DEV
-          </span>
-
-          <span>
+          <span
+            style={{
+              marginLeft: "auto",
+            }}
+          >
             BLOG PERSONAL
           </span>
 
@@ -191,5 +235,6 @@ function Blog() {
     </main>
   );
 }
+
 
 export default Blog;
