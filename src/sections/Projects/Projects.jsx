@@ -74,7 +74,7 @@ function Projects({ open, onClose }) {
       <div className="projects-wrapper">
 
         {/* =====================================
-            HEADER
+            CABECERA
         ===================================== */}
 
         <header className="projects-header">
@@ -220,7 +220,7 @@ function Projects({ open, onClose }) {
               ) : (
 
                 /* =================================
-                   PROYECTO DESACTIVADO
+                    PROYECTO DESACTIVADO
                 ================================= */
 
                 <button

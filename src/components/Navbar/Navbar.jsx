@@ -15,6 +15,7 @@ function Navbar({
   onAbout,
   onProjects,
   onBlog,
+  onGenerativeArt,
 }) {
   return (
     <nav className="navbar">
@@ -76,6 +77,14 @@ function Navbar({
             onClick={onBlog}
           >
             BLOG
+          </button>
+
+
+          <button
+            type="button"
+            onClick={onGenerativeArt}
+          >
+            ARTE GENERATIVO
           </button>
 
         </div>
