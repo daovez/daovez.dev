@@ -102,6 +102,8 @@
 
   overflow: hidden;
 
+  isolation: isolate;
+
   background:
     var(--color-card);
 
@@ -126,6 +128,18 @@
       0,
       0.16
     );
+}
+
+
+/* =========================================
+   CONTENIDO SOBRE PARTÍCULAS
+========================================= */
+
+.portfolio-card > nav,
+.portfolio-card > .hero {
+  position: relative;
+
+  z-index: 2;
 }
 
 

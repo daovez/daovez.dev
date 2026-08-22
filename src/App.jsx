@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   Routes,
   Route,
@@ -7,13 +8,17 @@ import {
 
 import "./App.css";
 
+
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
 import StudioLink from "./components/StudioLink/StudioLink";
+import Particles from "./components/Particles/Particles";
+
 
 import About from "./sections/About/About";
 import Projects from "./sections/Projects/Projects";
+
 
 import Blog from "./pages/Blog/Blog";
 import BlogPost1 from "./pages/Blog/BlogPost1";
@@ -106,7 +111,18 @@ function App() {
 
         <section className="portfolio-card">
 
-          {/* NAVBAR */}
+          {/* =================================
+              FORMAS P5
+          ================================= */}
+
+          <Particles
+            panelOpen={activePanel !== null}
+          />
+
+
+          {/* =================================
+              NAVBAR
+          ================================= */}
 
           <Navbar
             onHome={goHome}
@@ -116,21 +132,25 @@ function App() {
           />
 
 
-          {/* HERO */}
+          {/* =================================
+              HERO
+          ================================= */}
 
           <Hero />
 
 
-          {/* STUDIO */}
+          {/* =================================
+              STUDIO
+          ================================= */}
 
           <footer className="card-footer">
             <StudioLink />
           </footer>
 
 
-          {/* =====================================
+          {/* =================================
               SOBRE MÍ
-          ===================================== */}
+          ================================= */}
 
           <About
             open={activePanel === "about"}
@@ -138,9 +158,9 @@ function App() {
           />
 
 
-          {/* =====================================
+          {/* =================================
               PROYECTOS
-          ===================================== */}
+          ================================= */}
 
           <Projects
             open={activePanel === "projects"}
@@ -161,6 +181,7 @@ function App() {
   return (
     <>
       <CustomCursor />
+
 
       <Routes>
 
@@ -186,6 +207,7 @@ function App() {
         />
 
       </Routes>
+
     </>
   );
 }
