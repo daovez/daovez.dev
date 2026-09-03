@@ -56,6 +56,7 @@ function Panel({
       >
 
         <button
+          type="button"
           className="panel-close"
           onClick={onClose}
           aria-label="Cerrar"

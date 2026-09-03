@@ -31,7 +31,7 @@
 .studio-footer-logo {
   display: block;
 
-  width: 145px;
+  width: 175px;
   height: auto;
 
   object-fit: contain;
@@ -66,7 +66,7 @@
 @media (max-width: 900px) {
 
   .studio-footer-logo {
-    width: 130px;
+    width: 156px;
   }
 
 }
@@ -79,7 +79,7 @@
 @media (max-width: 500px) {
 
   .studio-footer-logo {
-    width: 105px;
+    width: 126px;
   }
 
 

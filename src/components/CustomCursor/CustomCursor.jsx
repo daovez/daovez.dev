@@ -9,6 +9,10 @@ function CustomCursor() {
     const cursor = cursorRef.current;
 
     const moveCursor = (event) => {
+      if (!cursor) {
+        return;
+      }
+
       cursor.style.left =
         `${event.clientX}px`;
 

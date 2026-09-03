@@ -450,8 +450,8 @@ function Particles({
 
             this.alpha =
               p.random(
-                190,
-                235
+                70,
+                110
               );
           }
 
@@ -484,8 +484,8 @@ function Particles({
                 this.size,
                 16,
                 74,
-                110,
-                58
+                48,
+                22
               );
           }
 
@@ -1057,9 +1057,9 @@ function Particles({
 
 
           p.fill(
-            this.black ? 2 : this.gray * 0.32,
-            this.black ? 10 : this.gray * 0.68,
-            this.black ? 22 : Math.min(255, this.gray * 1.15),
+            this.black ? 0 : this.gray,
+            this.black ? 0 : this.gray,
+            this.black ? 0 : this.gray,
             this.alpha
           );
 

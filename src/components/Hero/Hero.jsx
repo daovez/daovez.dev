@@ -7,11 +7,9 @@ function Hero() {
         <p className="hero-tag">DESARROLLADOR FULL STACK</p>
 
         <h1>
-          Imagino
-          <br />
-          Desarrollo y
-          <br />
-          Comparto.
+          <span>Imagino</span>
+          <span>Desarrollo y</span>
+          <span>Comparto.</span>
         </h1>
       </div>
 

@@ -76,32 +76,16 @@ function About({ open, onClose }) {
             <div className="about-description">
 
               <p>
-                Nací en Gerona, aunque actualmente vivo en Málaga.
-                Estudié el{" "}
+                Nací en Gerona y vivo en Málaga. Estudié{" "}
                 <u>
-                  Grado Superior en Desarrollo de Aplicaciones
-                  Multiplataforma (DAM)
+                  DAM
                 </u>{" "}
-                en DIGITECH y actualmente continúo mi formación
-                estudiando{" "}
+                en DIGITECH y ahora{" "}
                 <u>
                   Ingeniería en Inteligencia Artificial
                 </u>{" "}
-                en la UNED.
-              </p>
-
-
-              <p>
-                Además de mis estudios, desarrollo proyectos por mi
-                cuenta para seguir aprendiendo, experimentar con nuevas
-                tecnologías y mejorar mis habilidades como desarrollador.
-              </p>
-
-
-              <p>
-                En este portfolio comparto algunos de esos proyectos y
-                parte de mi evolución en el mundo del desarrollo de
-                software y la inteligencia artificial.
+                en la UNED. Aquí comparto proyectos con los que sigo
+                aprendiendo.
               </p>
 
             </div>
