@@ -1,0 +1,62 @@
+:root {
+  --color-background: #01050b;
+  --color-card: #061a36;
+  --color-black: #f3f8ff;
+  --color-text-secondary: #91aac5;
+  --blue-deep: #020b18;
+  --blue-card: #061a36;
+  --blue-panel: #09264a;
+  --blue-bright: #08a9ef;
+  --blue-line: rgba(96, 172, 238, 0.28);
+  --blue-text: #f3f8ff;
+  --blue-muted: #91aac5;
+}
+
+body { background: #01050b; color: var(--blue-text); }
+.page { background: #01050b; }
+.page-background-video { opacity: .5; filter: saturate(1.25) hue-rotate(170deg) brightness(.58); }
+.page-background-overlay { background: radial-gradient(circle at 57% 25%, rgba(0,174,244,.32), transparent 38%), rgba(0,5,14,.38); }
+.portfolio-card { color: var(--blue-text); background: radial-gradient(circle at 58% 26%, #087ebd 0, #073c73 24%, #061b39 57%, #020c1c 100%); border-color: #174d86; box-shadow: 0 0 0 1px rgba(52,141,220,.22), 0 45px 110px rgba(0,0,0,.7); }
+.navbar, .hero { color: var(--blue-text); }
+.navbar .brand-text, .navbar button, .navbar a, .hero h1, .hero-tag { color: inherit; }
+.navbar .logo img, .studio-footer-logo { filter: brightness(0) invert(1); }
+.nav-links button { color: rgba(238,247,255,.82); }
+.nav-links button:hover { color: #fff; text-shadow: 0 0 18px rgba(36,180,255,.65); }
+.nav-socials { border-color: rgba(134,195,242,.3); }
+.nav-socials a { color: #eff7ff; }
+.hero-tag { color: #d7eaff; }
+.hero-left h1 { color: #f7fbff; text-shadow: 0 4px 30px rgba(0,0,0,.2); }
+.visual { color: #fff; background: linear-gradient(145deg,#121212,#030303); border-color: rgba(113,183,238,.25); box-shadow: 30px 40px 80px rgba(0,0,0,.6); }
+
+.panel-overlay { background: rgba(0,4,12,.78); backdrop-filter: blur(13px); }
+.panel-card, .panel-card.about-card, .panel-card.projects-card { color: var(--blue-text); background: linear-gradient(145deg,#0b2b52,#05172e); border-color: var(--blue-line); box-shadow: 0 35px 100px rgba(0,0,0,.62); }
+.panel-card :is(h1,h2,h3,p,span,a,button), .about-card :is(h2,p,span,a,button), .projects-card :is(h2,p,span,a,button) { color: inherit; }
+.about-content, .skills-header, .project-item:not(:last-child)::after { border-color: var(--blue-line); }
+.about-number, .about-role, .about-location, .skills-year, .project-number, .project-stack, .project-info p { color: var(--blue-muted) !important; opacity: 1; }
+.about-description p { color: rgba(225,239,250,.72) !important; }
+.about-description u { color: #fff; text-decoration-color: #3f91cf; }
+.skill-icon { color: rgba(146,194,230,.55); }
+.skill-icon:hover { color: #6dc8ff !important; }
+.project-row { color: var(--blue-text); }
+.project-row::before { background: rgba(20,116,183,.22); }
+.project-preview-browser, .project-preview-empty { background: #06172d; border-color: var(--blue-line); color: var(--blue-text); }
+.preview-browser-bar { background: #0b2c52; border-color: var(--blue-line); }
+.panel-close { color: #fff; }
+
+.blog-page, .article-page, .voxel-page { color: var(--blue-text); background: radial-gradient(circle at 55% 0,#0c3d70 0,#061a35 35%,#020b18 78%); }
+.blog-card, .article-container, .voxel-shell { color: var(--blue-text); background: rgba(5,20,40,.88); border-color: var(--blue-line); box-shadow: 0 35px 90px rgba(0,0,0,.55); }
+.blog-page :is(h1,h2,p,span,a,button), .article-page :is(h1,h2,h3,p,span,a,button,li,code), .voxel-page :is(h1,h2,h3,p,span,a,button) { color: inherit; }
+.blog-heading p, .blog-row-category, .blog-row-date, .blog-footer, .article-nav-info, .article-meta, .article-content p, .voxel-gallery-count { color: var(--blue-muted) !important; }
+.blog-row, .blog-header, .blog-footer, .article-navbar, .article-header, .voxel-header, .voxel-gallery-header { border-color: var(--blue-line); }
+.blog-row-active { background: rgba(8,65,112,.28); }
+.blog-row-active:hover { background: rgba(13,105,170,.34); }
+.article-content pre, .article-content p code, .article-content li code { background: #020b18; color: #b9ddf4; border-color: var(--blue-line); }
+.article-content a { color: #63c8ff; }
+.voxel-brand-mark { background: #0b9ee6; }
+.voxel-work { border-color: var(--blue-line); background: #06172d; }
+.voxel-lightbox { background: rgba(0,5,14,.88); }
+.voxel-lightbox-card { background: #071b35; border-color: var(--blue-line); color: var(--blue-text); }
+
+@media (max-width: 650px) {
+  .portfolio-card { background: radial-gradient(circle at 55% 35%, #0879b6 0, #063665 28%, #04152d 65%, #020a17 100%); }
+}

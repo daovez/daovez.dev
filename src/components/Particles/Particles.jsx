@@ -1057,9 +1057,9 @@ function Particles({
 
 
           p.fill(
-            this.gray,
-            this.gray,
-            this.gray,
+            this.black ? 2 : this.gray * 0.32,
+            this.black ? 10 : this.gray * 0.68,
+            this.black ? 22 : Math.min(255, this.gray * 1.15),
             this.alpha
           );
 
@@ -1113,15 +1113,15 @@ function Particles({
         let amount =
           Math.floor(
             canvasWidth /
-            42
+            70
           );
 
 
         amount =
           p.constrain(
             amount,
-            18,
-            30
+            10,
+            18
           );
 
 

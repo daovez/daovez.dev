@@ -21,6 +21,7 @@ import Projects from "./sections/Projects/Projects";
 import CodeDojo from "./pages/Blog/Blog";
 import CodeDojoPost1 from "./pages/Blog/BlogPost1";
 import MagicaVoxel from "./pages/MagicaVoxel.jsx";
+import "./theme.css";
 
 
 const SEO_BY_PATH = {
