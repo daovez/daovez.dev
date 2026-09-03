@@ -3,19 +3,10 @@
   --color-card: #ffffff;
   --color-black: #000000;
   --color-text-secondary: #a0a0a0;
-  --blue-deep: #ffffff;
-  --blue-card: #ffffff;
-  --blue-panel: #ffffff;
-  --blue-bright: #000000;
-  --blue-line: #000000;
-  --blue-text: #000000;
-  --blue-muted: #a0a0a0;
 }
 
 body { background: #ffffff; color: #000000; }
 .page { background: #ffffff; }
-.page-background-video { opacity: .22; filter: grayscale(1) brightness(1.15); }
-.page-background-overlay { background: rgba(255, 255, 255, .72); }
 .portfolio-card { color: #000000; background: #ffffff; border-color: #000000; border-width: 9px; box-shadow: none; }
 .navbar, .hero { color: #000000; }
 .navbar .brand-text, .navbar button, .navbar a, .hero h1, .hero-tag { color: #000000; }

@@ -27,52 +27,6 @@
 
 
 /* =========================================
-   VÍDEO DE FONDO
-========================================= */
-
-.page-background-video {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: -3;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: center;
-
-  pointer-events: none;
-
-  user-select: none;
-}
-
-
-/* =========================================
-   CAPA SOBRE EL VÍDEO
-========================================= */
-
-.page-background-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: -2;
-
-  background:
-    rgba(
-      0,
-      0,
-      0,
-      0.12
-    );
-
-  pointer-events: none;
-}
-
-
-/* =========================================
    TARJETA PRINCIPAL
 ========================================= */
 

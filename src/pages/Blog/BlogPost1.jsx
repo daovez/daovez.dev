@@ -18,35 +18,39 @@ function BlogPost1() {
     const sessionKey =
       "javaDesdeCeroVisitedThisSession";
 
-    const currentVisits =
-      Number(
-        localStorage.getItem(
-          visitKey
+    try {
+      const currentVisits =
+        Number(
+          localStorage.getItem(
+            visitKey
+          )
+        ) || 0;
+
+      if (
+        sessionStorage.getItem(
+          sessionKey
         )
-      ) || 0;
+      ) {
+        return currentVisits;
+      }
 
-    if (
-      sessionStorage.getItem(
-        sessionKey
-      )
-    ) {
-      return currentVisits;
+      const newVisits =
+        currentVisits + 1;
+
+      localStorage.setItem(
+        visitKey,
+        newVisits.toString()
+      );
+
+      sessionStorage.setItem(
+        sessionKey,
+        "true"
+      );
+
+      return newVisits;
+    } catch {
+      return 0;
     }
-
-    const newVisits =
-      currentVisits + 1;
-
-    localStorage.setItem(
-      visitKey,
-      newVisits.toString()
-    );
-
-    sessionStorage.setItem(
-      sessionKey,
-      "true"
-    );
-
-    return newVisits;
   });
 
 
