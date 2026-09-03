@@ -1,45 +1,72 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
+import javaPost from "../../content/blog/Java.md?raw";
+
 import "./BlogPost.css";
+
 
 function BlogPost1() {
   const [showTop, setShowTop] = useState(false);
-  const [visits, setVisits] = useState(0);
+  const [visits] = useState(() => {
+    const visitKey =
+      "javaDesdeCeroVisits";
 
-  /* =========================================
-     CONTADOR LOCAL DE VISITAS
-  ========================================= */
-
-  useEffect(() => {
-    const visitKey = "blogPost1Visits";
-    const sessionKey = "blogPost1VisitedThisSession";
+    const sessionKey =
+      "javaDesdeCeroVisitedThisSession";
 
     const currentVisits =
-      Number(localStorage.getItem(visitKey)) || 0;
+      Number(
+        localStorage.getItem(
+          visitKey
+        )
+      ) || 0;
 
-    /*
-      Evita que React StrictMode sume dos visitas
-      mientras trabajamos en localhost.
-    */
-    if (!sessionStorage.getItem(sessionKey)) {
-      const newVisits = currentVisits + 1;
-
-      localStorage.setItem(
-        visitKey,
-        newVisits.toString()
-      );
-
-      sessionStorage.setItem(
-        sessionKey,
-        "true"
-      );
-
-      setVisits(newVisits);
-    } else {
-      setVisits(currentVisits);
+    if (
+      sessionStorage.getItem(
+        sessionKey
+      )
+    ) {
+      return currentVisits;
     }
-  }, []);
+
+    const newVisits =
+      currentVisits + 1;
+
+    localStorage.setItem(
+      visitKey,
+      newVisits.toString()
+    );
+
+    sessionStorage.setItem(
+      sessionKey,
+      "true"
+    );
+
+    return newVisits;
+  });
+
+
+  /* =========================================
+     PREPARAR MARKDOWN
+  ========================================= */
+
+  const markdownContent = javaPost
+    // Quitar frontmatter
+    .replace(
+      /^---[\s\S]*?---\s*/,
+      ""
+    )
+
+    // Quitar el H1 del Markdown
+    // porque ya mostramos el título arriba
+    .replace(
+      /^#\s+.*\n+/,
+      ""
+    );
 
 
   /* =========================================
@@ -48,15 +75,20 @@ function BlogPost1() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowTop(window.scrollY > 350);
+      setShowTop(
+        window.scrollY > 350
+      );
     };
+
 
     window.addEventListener(
       "scroll",
       handleScroll
     );
 
+
     handleScroll();
+
 
     return () => {
       window.removeEventListener(
@@ -84,11 +116,13 @@ function BlogPost1() {
 
       <article className="article-container">
 
-        {/* =========================================
+
+        {/* =====================================
             NAVBAR
-        ========================================= */}
+        ===================================== */}
 
         <nav className="article-navbar">
+
 
           {/* IZQUIERDA */}
 
@@ -101,7 +135,7 @@ function BlogPost1() {
             >
               <img
                 src="/logo.png"
-                alt="Daovez"
+                alt="Portfolio de David López, Daovez"
               />
             </Link>
 
@@ -112,9 +146,11 @@ function BlogPost1() {
                 ARTÍCULO 01
               </span>
 
+
               <span className="article-nav-separator">
                 /
               </span>
+
 
               <span>
                 POR DAOVEZ
@@ -125,13 +161,17 @@ function BlogPost1() {
           </div>
 
 
-          {/* CONTADOR CENTRAL */}
+          {/* VISITAS */}
 
           <div className="article-visits">
 
             <span className="article-visits-number">
-              {String(visits).padStart(6, "0")}
+              {String(visits).padStart(
+                6,
+                "0"
+              )}
             </span>
+
 
             <span className="article-visits-label">
               VISITAS
@@ -140,13 +180,13 @@ function BlogPost1() {
           </div>
 
 
-          {/* FOTO DERECHA */}
+          {/* FOTO */}
 
           <div className="article-profile">
 
             <img
               src="/foto-daovez.jpg"
-              alt="Daovez"
+              alt="David López, desarrollador Full Stack"
             />
 
           </div>
@@ -154,11 +194,12 @@ function BlogPost1() {
         </nav>
 
 
-        {/* =========================================
+        {/* =====================================
             ZONA DE LECTURA
-        ========================================= */}
+        ===================================== */}
 
         <div className="article-reading">
+
 
           {/* CABECERA */}
 
@@ -170,19 +211,21 @@ function BlogPost1() {
 
 
             <h1>
-              Mi primer artículo
+              ☕ Java desde cero
             </h1>
 
 
             <div className="article-meta">
 
               <span>
-                20 de agosto de 2026
+                3 de septiembre de 2026
               </span>
+
 
               <span className="article-meta-dot">
                 ·
               </span>
+
 
               <span>
                 5 min de lectura
@@ -193,106 +236,19 @@ function BlogPost1() {
           </header>
 
 
-          {/* =========================================
-              CONTENIDO
-          ========================================= */}
+          {/* =====================================
+              MARKDOWN
+          ===================================== */}
 
           <div className="article-content">
 
-            <p className="article-intro">
-              Este es mi primer artículo en daovez.dev.
-              Aquí iré compartiendo lo que voy aprendiendo
-              sobre programación, desarrollo web,
-              inteligencia artificial y mis propios proyectos.
-            </p>
-
-
-            <p>
-              La idea de este blog es documentar mi aprendizaje
-              de una forma sencilla y práctica. No solo quiero
-              mostrar resultados, sino también explicar el
-              proceso que hay detrás de cada proyecto.
-            </p>
-
-
-            <h2>
-              Aprender construyendo
-            </h2>
-
-
-            <p>
-              Una de las mejores formas de aprender programación
-              es crear proyectos reales. Cada problema obliga a
-              investigar, probar, equivocarse y encontrar una
-              solución.
-            </p>
-
-
-            <p>
-              Este mismo portfolio forma parte de ese proceso.
-              Mientras lo desarrollo practico React, JavaScript,
-              CSS, diseño responsive y organización de
-              componentes.
-            </p>
-
-
-            {/* BLOQUE DE CÓDIGO */}
-
-            <pre>
-              <code>
-{`function aprender() {
-  const estudiar = true;
-  const practicar = true;
-
-  if (estudiar && practicar) {
-    return "Seguir mejorando";
-  }
-}
-
-console.log(aprender());`}
-              </code>
-            </pre>
-
-
-            <h2>
-              Qué encontrarás aquí
-            </h2>
-
-
-            <p>
-              En este blog iré publicando contenido relacionado
-              con programación, desarrollo web, inteligencia
-              artificial y los proyectos que vaya desarrollando.
-            </p>
-
-
-            <p>
-              La intención es documentar el proceso completo:
-              desde las primeras ideas hasta los problemas que
-              aparecen durante el desarrollo y las soluciones
-              que voy encontrando.
-            </p>
-
-
-            <h2>
-              Seguir aprendiendo
-            </h2>
-
-
-            <p>
-              Este espacio irá creciendo con el tiempo. Cada
-              artículo será una oportunidad para profundizar en
-              un concepto, explicar una tecnología o mostrar
-              cómo he construido alguno de mis proyectos.
-            </p>
-
-
-            <p>
-              La página no tiene una altura limitada. Puedes
-              seguir añadiendo contenido, imágenes, código,
-              listas y nuevas secciones y el lector simplemente
-              continuará desplazándose hacia abajo.
-            </p>
+            <ReactMarkdown
+              remarkPlugins={[
+                remarkGfm,
+              ]}
+            >
+              {markdownContent}
+            </ReactMarkdown>
 
           </div>
 
@@ -301,9 +257,9 @@ console.log(aprender());`}
       </article>
 
 
-      {/* =========================================
+      {/* =====================================
           VOLVER ARRIBA
-      ========================================= */}
+      ===================================== */}
 
       {showTop && (
         <button
@@ -319,5 +275,6 @@ console.log(aprender());`}
     </main>
   );
 }
+
 
 export default BlogPost1;

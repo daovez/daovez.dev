@@ -11,7 +11,7 @@
     5vw
     100px;
 
-  background: #ffffff;
+  background: var(--color-card);
 
   color: #111111;
 }
@@ -222,7 +222,7 @@
 
   border-radius: 24px;
 
-  background: #ffffff;
+  background: var(--color-card);
 }
 
 
@@ -506,7 +506,7 @@
 
   border-radius: 4px;
 
-  background: #f1f1f1;
+  background: var(--color-card);
 
   font-family:
     "SFMono-Regular",
@@ -539,7 +539,7 @@
 
   border-radius: 10px;
 
-  background: #f5f5f3;
+  background: var(--color-card);
 
   color: #222222;
 

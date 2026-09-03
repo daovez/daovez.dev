@@ -1,49 +1,902 @@
 /* =========================================
-   P5 BACKGROUND
+   PROJECTS
+   Limpio y compatible con Projects.jsx actual
 ========================================= */
 
-.particles-background {
+.projects-card {
+  position: relative;
+
+  display: block;
+
+  overflow: visible !important;
+
+  color: #111111;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.projects-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  overflow: visible;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.projects-header {
+  width: 100%;
+  height: 18px;
+
+  display: grid;
+
+  grid-template-columns:
+    36px
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  column-gap: 18px;
+
+  margin:
+    0
+    0
+    22px;
+}
+
+
+.projects-number {
+  font-size: 9px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: #111111;
+
+  opacity: 0.3;
+}
+
+
+.projects-title {
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+
+/* =========================================
+   LISTA
+========================================= */
+
+.projects-list {
+  position: relative;
+
+  width: 100%;
+
+  flex: 1;
+
+  display: grid;
+
+  grid-template-rows:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  padding-top: 14px;
+
+  overflow: visible;
+
+  border-top:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.12
+    );
+}
+
+
+/* =========================================
+   ITEM
+========================================= */
+
+.project-item {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: visible;
+}
+
+
+.project-item:not(:last-child)::after {
+  content: "";
+
   position: absolute;
 
-  inset: 0;
+  left: 6px;
+  right: 6px;
 
-  z-index: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background:
+    rgba(
+      17,
+      17,
+      17,
+      0.09
+    );
+}
+
+
+/* =========================================
+   FILA
+========================================= */
+
+.project-row {
+  appearance: none;
+  -webkit-appearance: none;
+
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+  height: 58px;
+
+  display: grid;
+
+  grid-template-columns:
+    30px
+    minmax(0, 1fr)
+    auto
+    20px;
+
+  align-items: center;
+
+  column-gap: 15px;
+
+  margin: 0;
+
+  padding:
+    0
+    14px;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  color: #111111;
+
+  font: inherit;
+
+  text-align: left;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  isolation: isolate;
+
+  transition:
+    opacity 0.25s ease;
+}
+
+
+/* =========================================
+   HOVER DE FILA
+   RECTÁNGULO REDONDEADO
+========================================= */
+
+.project-row::before {
+  content: "";
+
+  position: absolute;
+
+  top: 6px;
+  bottom: 6px;
+
+  left: 4px;
+
+  width: 55%;
+
+  z-index: -1;
+
+  border-radius: 14px;
+
+  background:
+    rgba(
+      17,
+      17,
+      17,
+      0
+    );
+
+  box-shadow:
+    0
+    8px
+    24px
+    rgba(
+      0,
+      0,
+      0,
+      0
+    );
+
+  transform:
+    scaleX(0.96)
+    scaleY(0.96);
+
+  transform-origin:
+    left center;
+
+  transition:
+    background 0.25s ease,
+    transform 0.3s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    box-shadow 0.25s ease;
+}
+
+
+.project-row-active:hover::before,
+.project-row-active:focus-visible::before {
+  background:
+    rgba(
+      17,
+      17,
+      17,
+      0.065
+    );
+
+  transform:
+    scaleX(1)
+    scaleY(1);
+
+  box-shadow:
+    0
+    10px
+    28px
+    rgba(
+      0,
+      0,
+      0,
+      0.07
+    );
+}
+
+
+.project-row-active:hover::before {
+  border: 1px solid var(--color-black);
+}
+
+
+.project-row-active:hover,
+.project-row-active:focus-visible {
+  outline: none;
+}
+
+
+/* =========================================
+   NÚMERO
+========================================= */
+
+.project-number {
+  position: relative;
+
+  z-index: 4;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: #111111;
+
+  opacity: 0.3;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+/* =========================================
+   INFORMACIÓN
+========================================= */
+
+.project-info {
+  position: relative;
+
+  z-index: 4;
+
+  min-width: 0;
+
+  transition:
+    transform 0.28s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+
+.project-info h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      18px,
+      1.8vw,
+      24px
+    );
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -1.1px;
+
+  color: #111111;
+}
+
+
+.project-info p {
+  margin:
+    4px
+    0
+    0;
+
+  font-size: 8px;
+
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  color:
+    rgba(
+      17,
+      17,
+      17,
+      0.45
+    );
+}
+
+
+.project-row-active:hover
+.project-info,
+.project-row-active:focus-visible
+.project-info {
+  transform:
+    translateX(5px);
+}
+
+
+.project-row-active:hover
+.project-number,
+.project-row-active:focus-visible
+.project-number {
+  transform:
+    translateX(3px);
+}
+
+
+/* =========================================
+   STACK
+========================================= */
+
+.project-stack {
+  position: relative;
+
+  z-index: 4;
+
+  justify-self: end;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 1.15px;
+
+  white-space: nowrap;
+
+  text-transform: uppercase;
+
+  color: #111111;
+
+  opacity: 0.38;
+}
+
+
+/* =========================================
+   FLECHA
+========================================= */
+
+.project-arrow {
+  position: relative;
+
+  z-index: 4;
+
+  justify-self: end;
+
+  font-size: 14px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  color: #111111;
+
+  opacity: 0.32;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.25s ease;
+}
+
+
+.project-row-active:hover
+.project-arrow,
+.project-row-active:focus-visible
+.project-arrow {
+  opacity: 0.9;
+
+  transform:
+    translate(
+      2px,
+      -2px
+    );
+}
+
+
+/* =========================================
+   DESACTIVADOS
+========================================= */
+
+.project-row-disabled {
+  opacity: 0.24;
+
+  cursor: default;
+}
+
+
+.project-row-disabled::before {
+  display: none;
+}
+
+
+.project-row-disabled:hover,
+.project-row-disabled:focus-visible {
+  opacity: 0.32;
+
+  outline: none;
+}
+
+
+/* =========================================
+   PREVIEW DEL PROYECTO
+   RECTÁNGULO HORIZONTAL
+========================================= */
+
+.project-preview {
+  position: absolute;
+
+  top: 50%;
+  right: 18px;
+
+  z-index: 100;
+
+  width: 320px;
+  height: 200px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.42
+    );
+
+  border-radius: 18px;
+
+  background: var(--color-card);
+
+  box-shadow:
+    0
+    28px
+    60px
+    rgba(
+      0,
+      0,
+      0,
+      0.17
+    );
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform:
+    translateY(-50%)
+    translateX(14px)
+    scale(0.92);
+
+  transform-origin:
+    center center;
+
+  transition:
+    opacity 0.22s ease,
+    visibility 0.22s ease,
+    transform 0.34s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+
+/* =========================================
+   PREVIEW VISIBLE
+========================================= */
+
+.project-preview-visible {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(-50%)
+    translateX(0)
+    scale(1);
+}
+
+
+/* =========================================
+   CONTENEDOR PREVIEW
+========================================= */
+
+.project-preview-browser {
+  position: relative;
 
   width: 100%;
   height: 100%;
 
   overflow: hidden;
 
-  border-radius: inherit;
+  border-radius: 17px;
 
-  pointer-events: none;
-
-  user-select: none;
-}
-
-
-.particles-background canvas {
-  position: absolute;
-
-  inset: 0;
-
-  display: block;
-
-  width: 100% !important;
-  height: 100% !important;
-
-  border-radius: inherit;
-
-  pointer-events: none;
+  background: var(--color-card);
 }
 
 
 /* =========================================
-   CUADRADO GENERATIVE ART
+   BARRA DEL NAVEGADOR
+   OCULTA: SOLO MOSTRAMOS LA WEB
 ========================================= */
 
-.portfolio-card.generative-hover {
-  cursor: pointer;
+.preview-browser-bar {
+  display: none;
+}
+
+
+/* =========================================
+   CONTENIDO WEB
+========================================= */
+
+.preview-browser-content {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 17px;
+
+  background: var(--color-card);
+}
+
+
+/* =========================================
+   IFRAME
+   VIEWPORT DE ESCRITORIO CENTRADO
+========================================= */
+
+.preview-browser-content iframe {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 1440px;
+  height: 900px;
+
+  display: block;
+
+  border: 0;
+
+  background: var(--color-card);
+
+  pointer-events: none;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    )
+    scale(0.25);
+
+  transform-origin:
+    center center;
+}
+
+
+/* =========================================
+   ACABADO RECTANGULAR
+========================================= */
+
+.project-preview-browser::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+
+  border-radius: 17px;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset
+    0
+    0
+    0
+    1px
+    rgba(
+      255,
+      255,
+      255,
+      0.42
+    ),
+    inset
+    0
+    -16px
+    30px
+    rgba(
+      0,
+      0,
+      0,
+      0.035
+    );
+}
+
+
+/* =========================================
+   PRÓXIMAMENTE
+========================================= */
+
+.project-preview-empty {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  overflow: hidden;
+
+  border-radius: 17px;
+
+  background: var(--color-card);
+
+  color:
+    #ffffff;
+
+  text-align:
+    center;
+}
+
+
+.preview-coming {
+  font-size: 6px;
+
+  font-weight: 500;
+
+  letter-spacing: 2.2px;
+
+  opacity: 0.4;
+}
+
+
+.project-preview-empty strong {
+  max-width: 210px;
+
+  font-size: 19px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.6px;
+}
+
+
+.project-preview-empty small {
+  font-size: 7px;
+
+  opacity: 0.45;
+}
+
+
+/* =========================================
+   CERRAR
+========================================= */
+
+.projects-card
+.panel-close {
+  z-index: 10000;
+
+  color:
+    #111111;
+
+  opacity: 0.42;
+}
+
+
+.projects-card
+.panel-close:hover {
+  opacity: 1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .projects-header {
+    grid-template-columns:
+      30px
+      minmax(0, 1fr);
+
+    column-gap: 14px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .projects-list {
+    padding-top: 12px;
+  }
+
+
+  .project-row {
+    height: 56px;
+
+    grid-template-columns:
+      28px
+      minmax(0, 1fr)
+      auto
+      18px;
+
+    column-gap: 13px;
+
+    padding:
+      0
+      12px;
+  }
+
+
+  .project-row::before {
+    width: 54%;
+
+    border-radius: 13px;
+  }
+
+
+  .project-info h2 {
+    font-size: 21px;
+  }
+
+
+  .project-preview {
+    right: 12px;
+
+    width: 260px;
+    height: 165px;
+
+    border-radius: 16px;
+  }
+
+
+  .project-preview-browser,
+  .preview-browser-content,
+  .project-preview-empty {
+    border-radius: 15px;
+  }
+
+
+  .project-preview-browser::after {
+    border-radius: 15px;
+  }
+
+
+  .preview-browser-content iframe {
+    transform:
+      translate(
+        -50%,
+        -50%
+      )
+      scale(0.205);
+  }
+
 }
 
 
@@ -51,22 +904,65 @@
    MÓVIL
 ========================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
-  .particles-background {
-    opacity: 0.9;
+  .projects-header {
+    grid-template-columns:
+      26px
+      minmax(0, 1fr);
+
+    column-gap: 11px;
+
+    margin-bottom: 18px;
   }
 
-}
+
+  .projects-list {
+    padding-top: 10px;
+  }
 
 
-/* =========================================
-   REDUCIR MOVIMIENTO
-========================================= */
+  .project-row {
+    height: 54px;
 
-@media (prefers-reduced-motion: reduce) {
+    grid-template-columns:
+      25px
+      minmax(0, 1fr)
+      18px;
 
-  .particles-background {
+    column-gap: 10px;
+
+    padding:
+      0
+      9px;
+  }
+
+
+  .project-row::before {
+    width: 82%;
+
+    border-radius: 12px;
+  }
+
+
+  .project-info h2 {
+    font-size: 18px;
+
+    letter-spacing: -0.7px;
+  }
+
+
+  .project-info p {
+    font-size: 7px;
+  }
+
+
+  .project-stack {
+    display: none;
+  }
+
+
+  .project-preview {
     display: none;
   }
 

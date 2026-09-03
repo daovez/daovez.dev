@@ -1,4 +1,5 @@
 import "./Navbar.css";
+
 import logo from "../../assets/logo.png";
 
 import {
@@ -7,7 +8,9 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-import { FaXTwitter } from "react-icons/fa6";
+import {
+  FaXTwitter,
+} from "react-icons/fa6";
 
 
 function Navbar({
@@ -15,10 +18,11 @@ function Navbar({
   onAbout,
   onProjects,
   onBlog,
-  onGenerativeArt,
+  onMagicaVoxel,
 }) {
   return (
     <nav className="navbar">
+
 
       {/* =========================================
           IZQUIERDA
@@ -52,7 +56,10 @@ function Navbar({
 
       <div className="navbar-right">
 
-        {/* MENÚ */}
+
+        {/* =========================================
+            MENÚ
+        ========================================= */}
 
         <div className="nav-links">
 
@@ -76,15 +83,15 @@ function Navbar({
             type="button"
             onClick={onBlog}
           >
-            BLOG
+            CODE DOJO
           </button>
 
 
           <button
             type="button"
-            onClick={onGenerativeArt}
+            onClick={onMagicaVoxel}
           >
-            ARTE GENERATIVO
+            MAGICA VOXEL
           </button>
 
         </div>
@@ -117,7 +124,9 @@ function Navbar({
 
 
           <a
-            href="#"
+            href="https://x.com/daovez"
+            target="_blank"
+            rel="noreferrer"
             aria-label="X"
           >
             <FaXTwitter />
@@ -125,7 +134,9 @@ function Navbar({
 
 
           <a
-            href="#"
+            href="https://www.instagram.com/daovez/"
+            target="_blank"
+            rel="noreferrer"
             aria-label="Instagram"
           >
             <FaInstagram />

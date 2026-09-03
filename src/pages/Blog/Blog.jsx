@@ -83,14 +83,14 @@ function Blog() {
 
 
               <h2>
-                Título del primer artículo
+               ☕ JAVA
               </h2>
 
             </div>
 
 
             <span className="blog-row-date">
-              20.08.2026
+              03.09.2026
             </span>
 
 

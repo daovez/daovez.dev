@@ -1,0 +1,989 @@
+/* =========================================
+   MAGICA VOXEL PAGE
+========================================= */
+
+.voxel-page {
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding:
+    42px
+    28px
+    90px;
+
+  background: var(--color-card);
+
+  color: #111111;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================
+   SHELL
+========================================= */
+
+.voxel-shell {
+  width:
+    min(
+      1280px,
+      100%
+    );
+
+  margin:
+    0
+    auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.voxel-header {
+  position: relative;
+
+  width: 100%;
+
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.14
+    );
+}
+
+
+/* =========================================
+   VOLVER
+========================================= */
+
+.voxel-back {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #111111;
+
+  font-family: inherit;
+
+  font-size: 30px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.voxel-back:hover {
+  opacity: 0.45;
+
+  transform:
+    translateX(-4px);
+}
+
+
+/* =========================================
+   MARCA CENTRAL
+========================================= */
+
+.voxel-brand {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+}
+
+
+/* =========================================
+   CUADRADO
+========================================= */
+
+.voxel-brand-mark {
+  width: 14px;
+  height: 14px;
+
+  display: block;
+
+  flex-shrink: 0;
+
+  border-radius: 4px;
+
+  background: #f4c430;
+}
+
+
+/* =========================================
+   MAGICA VOXEL
+========================================= */
+
+.voxel-brand-title {
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  color: #111111;
+}
+
+
+/* =========================================
+   /
+========================================= */
+
+.voxel-brand-separator {
+  font-size: 10px;
+
+  font-weight: 400;
+
+  color: #111111;
+
+  opacity: 0.18;
+}
+
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+.voxel-brand-section {
+  font-size: 10px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  color: #111111;
+
+  opacity: 0.28;
+}
+
+
+/* =========================================
+   DAOVEZ
+========================================= */
+
+.voxel-daovez {
+  font-size: 8px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+
+  color: #111111;
+
+  opacity: 0.34;
+}
+
+
+/* =========================================
+   SECCIÓN GALERÍA
+========================================= */
+
+.voxel-gallery-section {
+  width: 100%;
+
+  padding-top: 42px;
+}
+
+
+/* =========================================
+   CABECERA GALERÍA
+========================================= */
+
+.voxel-gallery-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================
+   OBRAS
+========================================= */
+
+.voxel-gallery-title {
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.voxel-gallery-count {
+  font-size: 9px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 2px;
+
+  color: #111111;
+
+  opacity: 0.5;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.voxel-gallery {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 16px;
+}
+
+
+/* =========================================
+   OBRA
+========================================= */
+
+.voxel-work {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio:
+    1 /
+    0.92;
+
+  display: block;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: var(--color-card);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 14px
+    rgba(
+      0,
+      0,
+      0,
+      0.025
+    );
+
+  transition:
+    transform 0.3s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   IMAGEN OBRA
+========================================= */
+
+.voxel-work img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.55s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.voxel-work:hover {
+  border: 1px solid var(--color-black);
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 20px 38px
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+}
+
+
+.voxel-work:hover img {
+  transform:
+    scale(1.035);
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.voxel-work-overlay {
+  position: absolute;
+
+  inset:
+    auto
+    0
+    0
+    0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    30px
+    18px
+    16px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(
+        0,
+        0,
+        0,
+        0.55
+      ),
+      transparent
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.25s ease;
+}
+
+
+.voxel-work:hover
+.voxel-work-overlay {
+  opacity: 1;
+}
+
+
+/* =========================================
+   OVERLAY TEXTO
+========================================= */
+
+.voxel-work-overlay span {
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
+}
+
+
+.voxel-work-overlay strong {
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.voxel-lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 10000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    rgba(
+      15,
+      15,
+      15,
+      0.32
+    );
+
+  backdrop-filter:
+    blur(14px);
+
+  -webkit-backdrop-filter:
+    blur(14px);
+}
+
+
+/* =========================================
+   TARJETA LIGHTBOX
+========================================= */
+
+.voxel-lightbox-card {
+  position: relative;
+
+  width:
+    min(
+      660px,
+      92vw
+    );
+
+  max-height:
+    90vh;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: var(--color-card);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 28px 80px
+    rgba(
+      0,
+      0,
+      0,
+      0.28
+    );
+}
+
+
+/* =========================================
+   IMAGEN LIGHTBOX
+========================================= */
+
+.voxel-lightbox-image-wrapper {
+  width: 100%;
+
+  height:
+    min(
+      560px,
+      62vh
+    );
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: var(--color-card);
+}
+
+
+.voxel-lightbox-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   INFORMACIÓN LIGHTBOX
+========================================= */
+
+.voxel-lightbox-info {
+  width: 100%;
+
+  padding:
+    24px
+    30px
+    30px;
+}
+
+
+.voxel-lightbox-info h2 {
+  margin:
+    0
+    0
+    7px;
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.6px;
+}
+
+
+.voxel-lightbox-info p {
+  margin:
+    0
+    0
+    20px;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.66
+    );
+}
+
+
+.voxel-lightbox-info span {
+  font-size: 8px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 2.5px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.66
+    );
+}
+
+
+/* =========================================
+   CERRAR LIGHTBOX
+========================================= */
+
+.voxel-lightbox-close {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  position: absolute;
+
+  top: 16px;
+  right: 18px;
+
+  z-index: 10;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 30px;
+
+  font-weight: 200;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  opacity: 0.82;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.voxel-lightbox-close:hover {
+  opacity: 1;
+
+  transform:
+    rotate(90deg);
+}
+
+
+/* =========================================
+   FLECHAS LIGHTBOX
+========================================= */
+
+.voxel-lightbox-arrow {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  position: absolute;
+
+  top: 44%;
+
+  z-index: 10;
+
+  width: 44px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 38px;
+
+  font-weight: 200;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  opacity: 0.55;
+
+  transform:
+    translateY(-50%);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.voxel-lightbox-arrow:hover {
+  opacity: 1;
+}
+
+
+/* =========================================
+   FLECHA IZQUIERDA
+========================================= */
+
+.voxel-lightbox-arrow-left {
+  left: 8px;
+}
+
+
+/* =========================================
+   FLECHA DERECHA
+========================================= */
+
+.voxel-lightbox-arrow-right {
+  right: 8px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .voxel-page {
+    padding:
+      30px
+      20px
+      70px;
+  }
+
+
+  .voxel-gallery {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+
+  .voxel-brand {
+    gap: 8px;
+  }
+
+
+  .voxel-brand-title,
+  .voxel-brand-section {
+    letter-spacing: 2px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+  .voxel-page {
+    padding:
+      18px
+      12px
+      50px;
+  }
+
+
+  .voxel-header {
+    height: 62px;
+  }
+
+
+  .voxel-brand {
+    position: static;
+
+    transform: none;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .voxel-brand-mark {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 3px;
+  }
+
+
+  .voxel-brand-title {
+    font-size: 8px;
+
+    letter-spacing: 1.8px;
+  }
+
+
+  .voxel-brand-separator,
+  .voxel-brand-section {
+    display: none;
+  }
+
+
+  .voxel-daovez {
+    display: none;
+  }
+
+
+  .voxel-back {
+    font-size: 25px;
+  }
+
+
+  .voxel-gallery-section {
+    padding-top: 28px;
+  }
+
+
+  .voxel-gallery {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  .voxel-work {
+    aspect-ratio:
+      1 /
+      0.9;
+
+    border-radius: 12px;
+  }
+
+
+  .voxel-work-overlay {
+    opacity: 1;
+
+    padding:
+      40px
+      14px
+      14px;
+  }
+
+
+  .voxel-lightbox {
+    padding: 10px;
+  }
+
+
+  .voxel-lightbox-card {
+    width: 100%;
+
+    border-radius: 14px;
+  }
+
+
+  .voxel-lightbox-image-wrapper {
+    height: 62vh;
+  }
+
+
+  .voxel-lightbox-info {
+    padding:
+      20px
+      20px
+      24px;
+  }
+
+
+  .voxel-lightbox-arrow {
+    font-size: 32px;
+  }
+
+}
+
+
+/* =========================================
+   REDUCIR MOVIMIENTO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .voxel-work,
+  .voxel-work img,
+  .voxel-back,
+  .voxel-lightbox-close,
+  .voxel-lightbox-arrow {
+    transition: none;
+  }
+
+}

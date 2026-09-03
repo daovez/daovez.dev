@@ -22,7 +22,9 @@
 
   overflow: hidden;
 
-  background: #000000;
+  .page {
+  background: #2f2f2f;
+}
 
   isolation: isolate;
 }

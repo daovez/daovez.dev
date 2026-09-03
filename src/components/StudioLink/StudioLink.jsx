@@ -10,7 +10,7 @@ function StudioLink() {
     >
       <img
         src="/logo2.png"
-        alt="Daovez Studio Web"
+        alt="Daovez Studio"
         className="studio-footer-logo"
       />
     </a>

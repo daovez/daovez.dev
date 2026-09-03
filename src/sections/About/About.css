@@ -166,8 +166,8 @@
 
   font-size:
     clamp(
-      30px,
-      3vw,
+      10px,
+      2vw,
       40px
     );
 
@@ -632,7 +632,7 @@
 
 
   .about-info h2 {
-    font-size: 29px;
+    font-size: 16px;
 
     letter-spacing: -1.5px;
   }
