@@ -15,7 +15,7 @@
 
   grid-template-columns:
     minmax(0, 1fr)
-    minmax(260px, 1fr)
+    270px
     140px;
 
   align-items: center;
@@ -165,6 +165,47 @@
 
 
 /* =========================================
+   PORTÁTIL / TABLET HORIZONTAL
+========================================= */
+
+@media (min-width: 901px) and (max-width: 1100px) {
+
+  .hero {
+    grid-template-columns:
+      minmax(0, 1fr)
+      220px
+      0;
+
+    column-gap: 25px;
+
+    padding:
+      0
+      32px
+      40px;
+  }
+
+
+  .hero-left h1 {
+    font-size:
+      clamp(
+        52px,
+        5.4vw,
+        60px
+      );
+  }
+
+
+  .visual {
+    width: 220px;
+    height: 274px;
+
+    font-size: 64px;
+  }
+
+}
+
+
+/* =========================================
    TABLET
 ========================================= */
 
@@ -273,9 +314,9 @@
 
     font-size:
       clamp(
-        60px,
-        16.5vw,
-        70px
+        44px,
+        14vw,
+        60px
       );
 
     font-weight: 500;
@@ -311,7 +352,12 @@
 
 
   .hero-left h1 {
-    font-size: 62px;
+    font-size:
+      clamp(
+        44px,
+        14vw,
+        53px
+      );
 
     line-height: 0.92;
 

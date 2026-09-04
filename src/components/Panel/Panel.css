@@ -341,3 +341,23 @@ background: var(--color-card);
   }
 
 }
+
+
+/* =========================================
+   MÓVIL ESTRECHO
+========================================= */
+
+@media (max-width: 380px) {
+
+  .panel-card,
+  .panel-card.about-card,
+  .panel-card.projects-card {
+    width: 100%;
+
+    padding:
+      48px
+      16px
+      24px;
+  }
+
+}

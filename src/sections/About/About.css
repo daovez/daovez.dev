@@ -664,3 +664,28 @@
   }
 
 }
+
+
+/* =========================================
+   MÓVIL ESTRECHO
+========================================= */
+
+@media (max-width: 380px) {
+
+  .about-info {
+    padding-left: 0;
+  }
+
+
+  .about-heading-row {
+    gap: 12px;
+  }
+
+
+  .skills-logos {
+    gap:
+      22px
+      8px;
+  }
+
+}
