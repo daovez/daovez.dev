@@ -20,7 +20,6 @@ import Projects from "./sections/Projects/Projects";
 
 import CodeDojo from "./pages/Blog/Blog";
 import CodeDojoPost1 from "./pages/Blog/BlogPost1";
-import MagicaVoxel from "./pages/MagicaVoxel";
 import "./theme.css";
 
 
@@ -36,10 +35,6 @@ const SEO_BY_PATH = {
   "/blog/post1": {
     title: "Java desde cero | Programación Java | Daovez",
     description: "Introducción práctica a la programación Java desde cero: fundamentos del lenguaje, JVM y primeros pasos para aprender desarrollo con Java.",
-  },
-  "/magica-voxel": {
-    title: "MagicaVoxel y voxel art | Galería de Daovez",
-    description: "Galería de arte voxel creado con MagicaVoxel por David López (Daovez), vinculada al creative coding y al desarrollo digital.",
   },
 };
 
@@ -129,17 +124,6 @@ function App() {
 
 
   /* =========================================
-     MAGICA VOXEL
-  ========================================= */
-
-  const openMagicaVoxel = () => {
-    setActivePanel(null);
-
-    navigate("/magica-voxel");
-  };
-
-
-  /* =========================================
      PORTFOLIO
   ========================================= */
 
@@ -159,7 +143,6 @@ function App() {
             onAbout={() => openPanel("about")}
             onProjects={() => openPanel("projects")}
             onBlog={openCodeDojo}
-            onMagicaVoxel={openMagicaVoxel}
           />
 
 
@@ -231,16 +214,6 @@ function App() {
         <Route
           path="/blog/post1"
           element={<CodeDojoPost1 />}
-        />
-
-
-        {/* =====================================
-            MAGICA VOXEL
-        ===================================== */}
-
-        <Route
-          path="/magica-voxel"
-          element={<MagicaVoxel />}
         />
 
       </Routes>

@@ -34,20 +34,16 @@ body { background: #ffffff; color: #000000; }
 .preview-browser-bar { background: #f4f4f4; border-color: #000000; }
 .panel-close { color: #000000; }
 
-.blog-page, .article-page, .voxel-page { color: #000000; background: #ffffff; }
+.blog-page, .article-page { color: #000000; background: #ffffff; }
 .blog-card { color: #000000; background: #ffffff; border-color: #000000; border-width: 9px; box-shadow: none; }
-.article-container, .voxel-shell { color: #000000; background: #ffffff; }
-.blog-page :is(h1,h2,p,span,a,button), .article-page :is(h1,h2,h3,p,span,a,button,li,code), .voxel-page :is(h1,h2,h3,p,span,a,button) { color: inherit; }
-.blog-heading p, .blog-row-category, .blog-row-date, .blog-footer, .article-nav-info, .article-meta, .article-content p, .voxel-gallery-count { color: #a0a0a0 !important; }
-.blog-row, .blog-header, .blog-footer, .article-navbar, .article-header, .voxel-header, .voxel-gallery-header { border-color: #000000; }
+.article-container { color: #000000; background: #ffffff; }
+.blog-page :is(h1,h2,p,span,a,button), .article-page :is(h1,h2,h3,p,span,a,button,li,code) { color: inherit; }
+.blog-heading p, .blog-row-category, .blog-row-date, .blog-footer, .article-nav-info, .article-meta, .article-content p { color: #a0a0a0 !important; }
+.blog-row, .blog-header, .blog-footer, .article-navbar, .article-header { border-color: #000000; }
 .blog-row-active { background: transparent; }
 .blog-row-active:hover { background: #f4f4f4; }
 .article-content pre, .article-content p code, .article-content li code { background: #f4f4f4; color: #000000; border-color: #000000; }
 .article-content a { color: #000000; }
-.voxel-brand-mark { background: #000000; }
-.voxel-work { border-color: #000000; background: #f4f4f4; }
-.voxel-lightbox { background: rgba(255, 255, 255, .82); }
-.voxel-lightbox-card { background: #ffffff; border-color: #000000; color: #000000; }
 
 .custom-cursor { background: #000000; }
 

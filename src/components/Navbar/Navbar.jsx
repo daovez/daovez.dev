@@ -18,7 +18,6 @@ function Navbar({
   onAbout,
   onProjects,
   onBlog,
-  onMagicaVoxel,
 }) {
   return (
     <nav className="navbar">
@@ -44,7 +43,7 @@ function Navbar({
 
 
         <span className="brand-text">
-          portafolio daovez
+          portfolio
         </span>
 
       </div>
@@ -84,14 +83,6 @@ function Navbar({
             onClick={onBlog}
           >
             CODE DOJO
-          </button>
-
-
-          <button
-            type="button"
-            onClick={onMagicaVoxel}
-          >
-            MAGICA VOXEL
           </button>
 
         </div>

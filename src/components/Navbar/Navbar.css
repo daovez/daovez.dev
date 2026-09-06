@@ -287,11 +287,11 @@
 
   .navbar {
     padding:
-      15px
+      16px
       20px
-      18px;
+      20px;
 
-    gap: 14px;
+    gap: 18px;
   }
 
 
@@ -301,7 +301,7 @@
 
 
   .brand {
-    gap: 10px;
+    gap: 12px;
   }
 
 
@@ -311,16 +311,18 @@
 
 
   .navbar-right {
-    gap: 14px;
+    gap: 18px;
   }
 
 
   .nav-links {
-    gap: 13px;
+    gap: 18px;
   }
 
 
   .nav-links button {
+    padding: 8px 4px;
+
     font-size: 13px;
 
     letter-spacing: 0.3px;
@@ -328,13 +330,15 @@
 
 
   .nav-socials {
-    gap: 10px;
+    gap: 16px;
 
-    padding-left: 13px;
+    padding-left: 16px;
   }
 
 
   .nav-socials a {
+    padding: 6px;
+
     font-size: 20px;
   }
 
@@ -358,12 +362,12 @@
     align-items: stretch;
     justify-content: flex-start;
 
-    gap: 15px;
+    gap: 18px;
 
     padding:
-      14px
+      16px
       18px
-      18px;
+      20px;
   }
 
 
@@ -415,7 +419,7 @@
 
     align-items: stretch;
 
-    gap: 13px;
+    gap: 16px;
   }
 
 
@@ -432,18 +436,20 @@
     align-items: center;
     justify-content: space-between;
 
-    gap: 8px;
+    gap: 16px;
   }
 
 
   .nav-links button {
     flex: 0 0 auto;
 
+    padding: 10px 4px;
+
     font-size: 13px;
 
     font-weight: 600;
 
-    line-height: 1;
+    line-height: 1.2;
 
     letter-spacing: 0.25px;
 
@@ -464,7 +470,7 @@
     align-items: center;
     justify-content: flex-end;
 
-    gap: 13px;
+    gap: 18px;
 
     padding-left: 0;
 
@@ -473,6 +479,8 @@
 
 
   .nav-socials a {
+    padding: 8px;
+
     font-size: 22px;
 
     opacity: 1;
@@ -500,9 +508,9 @@
 
   .navbar {
     padding:
-      14px
       16px
-      18px;
+      16px
+      20px;
   }
 
 
@@ -512,11 +520,13 @@
 
 
   .nav-links {
-    gap: 6px;
+    gap: 12px;
   }
 
 
   .nav-links button {
+    padding: 10px 2px;
+
     font-size: 12px;
 
     letter-spacing: 0.15px;
@@ -524,11 +534,13 @@
 
 
   .nav-socials {
-    gap: 12px;
+    gap: 16px;
   }
 
 
   .nav-socials a {
+    padding: 8px;
+
     font-size: 22px;
   }
 

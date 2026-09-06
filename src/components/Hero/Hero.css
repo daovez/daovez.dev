@@ -48,6 +48,8 @@
 ========================================= */
 
 .hero-tag {
+  position: relative;
+
   margin:
     0
     0
@@ -60,6 +62,70 @@
   letter-spacing: 2px;
 
   text-transform: uppercase;
+}
+
+
+.hero-tag-sizer {
+  visibility: hidden;
+
+  pointer-events: none;
+}
+
+
+.hero-tag-sizer::after {
+  content: "|";
+
+  margin-left: 2px;
+
+  letter-spacing: 0;
+}
+
+
+.hero-tag-typed {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+
+.hero-tag-cursor {
+  display: inline-block;
+
+  margin-left: 2px;
+
+  font-weight: 400;
+
+  letter-spacing: 0;
+
+  animation:
+    hero-tag-caret
+    1.05s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes hero-tag-caret {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  55%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-tag-cursor {
+    display: none;
+
+    animation: none;
+  }
 }
 
 
